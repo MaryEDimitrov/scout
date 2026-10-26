@@ -1,0 +1,23 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+
+# macOS
+.DS_Store
+
+
+# Run outputs stay local, except clean evidence for the report. Runs that read a real jail log
+# (people's names) are never committed.
+runs/*
+!runs/evaluation/
+!runs/cost_report.md
+!runs/token_log.csv
+!runs/20261024-104436-public-spending/

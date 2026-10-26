@@ -1,0 +1,3 @@
+# Only needed to re-extract text from the PDFs. The app and tests do not need it.
+-r requirements.txt
+pdfplumber==0.11.4

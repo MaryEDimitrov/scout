@@ -1,0 +1,6 @@
+certifi==2026.10.23
+openai==3.37.0
+python-dotenv==1.2.4
+pypdf==6.21.2
+streamlit==1.66.1
+pytest==9.1.1

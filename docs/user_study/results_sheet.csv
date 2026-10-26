@@ -1,0 +1,11 @@
+participant,quote_permission,part,elapsed_mm_ss,event,matches_reference_lead,would_pursue,evidence_correct,notes
+Colleague 1,,by hand,,lead named,,,,
+Colleague 1,,by hand,20:00,stopped,,,,
+Colleague 1,,app,,first lead card shown,,,,
+Colleague 1,,app,,card: <title>,,yes/maybe/no,yes/no,
+Colleague 1,,app,,finished reading cards,,,,
+Colleague 2,,by hand,,lead named,,,,
+Colleague 2,,by hand,20:00,stopped,,,,
+Colleague 2,,app,,first lead card shown,,,,
+Colleague 2,,app,,card: <title>,,yes/maybe/no,yes/no,
+Colleague 2,,app,,finished reading cards,,,,

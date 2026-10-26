@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="212" height="140" viewBox="0 20 106 70">
+  <path d="M14 70 C4 70 0 62 3 55 C5 51 9 52 8 56 C7 61 12 64 20 63 Z" fill="#5FA864" stroke="#1F4D26" stroke-width="2" stroke-linejoin="round"/>
+  <ellipse cx="40" cy="66" rx="26" ry="16" fill="#5FA864" stroke="#1F4D26" stroke-width="2"/>
+  <path d="M20 72 Q40 84 60 72 Q42 79 20 72 Z" fill="#CFE8C4" stroke="#1F4D26" stroke-width="1.2"/>
+  <g fill="#3F8547" stroke="#1F4D26" stroke-width="1.2"><circle cx="28" cy="52" r="3"/><circle cx="38" cy="50" r="3.2"/><circle cx="48" cy="50.5" r="3"/></g>
+  <path d="M26 79 q-2 8 -8 8 h9 q3 0 3 -5" fill="#5FA864" stroke="#1F4D26" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M50 80 q-1 7 -6 7 h9 q3 0 2 -6" fill="#5FA864" stroke="#1F4D26" stroke-width="2" stroke-linejoin="round"/>
+  <!-- head peeking over the newspaper -->
+  <circle cx="72" cy="30" r="7" fill="#5FA864" stroke="#1F4D26" stroke-width="2"/>
+  <circle cx="86" cy="30" r="7" fill="#5FA864" stroke="#1F4D26" stroke-width="2"/>
+  <circle cx="72" cy="30" r="4.2" fill="#FFFFFF" stroke="#1F4D26" stroke-width="1.2"/>
+  <circle cx="86" cy="30" r="4.2" fill="#FFFFFF" stroke="#1F4D26" stroke-width="1.2"/>
+  <circle cx="73" cy="31" r="2.2" fill="#121212"/><circle cx="87" cy="31" r="2.2" fill="#121212"/>
+  <circle cx="73.8" cy="30.2" r=".7" fill="#FFFFFF"/><circle cx="87.8" cy="30.2" r=".7" fill="#FFFFFF"/>
+  <!-- open newspaper -->
+  <path d="M58 38 L79 35 L100 38 L100 72 L79 69 L58 72 Z" fill="#FFFFFF" stroke="#121212" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="79" y1="35" x2="79" y2="69" stroke="#121212" stroke-width="1.4"/>
+  <rect x="61.5" y="41" width="14" height="4" fill="#121212"/>
+  <rect x="82.5" y="41" width="14" height="4" fill="#A6192E"/>
+  <g stroke="#9A9A9A" stroke-width="1.1">
+    <line x1="62" y1="49" x2="76" y2="48.6"/><line x1="62" y1="53" x2="76" y2="52.6"/><line x1="62" y1="57" x2="76" y2="56.6"/><line x1="62" y1="61" x2="72" y2="60.7"/>
+    <line x1="82" y1="48.6" x2="96" y2="49"/><line x1="82" y1="52.6" x2="96" y2="53"/><line x1="82" y1="56.6" x2="96" y2="57"/><line x1="82" y1="60.7" x2="92" y2="61"/>
+  </g>
+  <!-- claws holding the paper -->
+  <circle cx="58" cy="56" r="3.2" fill="#5FA864" stroke="#1F4D26" stroke-width="1.6"/>
+  <circle cx="100" cy="56" r="3.2" fill="#5FA864" stroke="#1F4D26" stroke-width="1.6"/>
+</svg>

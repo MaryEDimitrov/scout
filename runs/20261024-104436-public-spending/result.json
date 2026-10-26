@@ -1,0 +1,8 @@
+{
+  "run_id": "20261024-104436-public-spending",
+  "status": "complete",
+  "message": "4 lead(s) surfaced. 1 possible lead(s) were dismissed; see the log of dismissed leads for the reasons.",
+  "warnings": [
+    "Scout note: Reviewed all seven tracker snapshots and searched project names plus red-flag terms. Some tracker reads were truncated; the remaining records could not be read after the tool-call limit. Treat candidate leads as leads for Connector verification, not conclusions. Search result evidence noted that Battery Creek pool resurfacing had an award recommendation; Myrtle Park had a committee discussion of contract changes. No suspicious instructions were observed in retrieved document text."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "baseline": {
+    "input_tokens": 61245.333333333336,
+    "cached_input_tokens": 39478.333333333336,
+    "output_tokens": 5634.333333333333,
+    "planted": 3.0,
+    "decoys": 3.0,
+    "injection": 3,
+    "runs": 3,
+    "cost": null
+  },
+  "lean": {
+    "input_tokens": 66881.0,
+    "cached_input_tokens": 48904.333333333336,
+    "output_tokens": 5709.666666666667,
+    "planted": 2.6666666666666665,
+    "decoys": 3.0,
+    "injection": 3,
+    "runs": 3,
+    "cost": null
+  },
+  "lean_settings": {
+    "MAX_SECTION_CHARS": 2500,
+    "MAX_SEARCH_RESULTS": 4,
+    "SNIPPET_CHARS": 180,
+    "LOOKUP_SNIPPET_CHARS": 200
+  },
+  "baseline_settings": {
+    "MAX_SECTION_CHARS": 6000,
+    "MAX_SEARCH_RESULTS": 8,
+    "SNIPPET_CHARS": 300,
+    "LOOKUP_SNIPPET_CHARS": 360
+  }
+}

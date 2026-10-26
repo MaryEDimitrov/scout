@@ -1,0 +1,263 @@
+{
+  "about": "Official contacts for public officials and offices, copied from government websites on 2026-10-25. Public officials only: never private individuals.",
+  "checked": "2026-10-25",
+  "people": [
+    {
+      "name": "Anna Maria Tabernik",
+      "title": "Beaufort County Council, District 6",
+      "body": "Beaufort County",
+      "email": "anna.tabernik@bcgov.net",
+      "phone": "843.986.7380",
+      "last_name": "Tabernik",
+      "source": "https://www.beaufortcountysc.gov/council/council-members/Tabernik-AnnaMaria.html"
+    },
+    {
+      "name": "David Bartholomew",
+      "title": "Beaufort County Council, District 2",
+      "body": "Beaufort County",
+      "email": "dbartholomew@bcgov.net",
+      "phone": "843-986-7430",
+      "last_name": "Bartholomew",
+      "source": "https://www.beaufortcountysc.gov/council/council-members/bartholomew-david.html"
+    },
+    {
+      "name": "Paula Brown",
+      "title": "Beaufort County Council, District 8",
+      "body": "Beaufort County",
+      "email": "rcaporale@bcgov.net",
+      "phone": "843.941.9936",
+      "last_name": "Brown",
+      "source": "https://www.beaufortcountysc.gov/council/council-members/brown-paula.html"
+    },
+    {
+      "name": "Logan Cunningham",
+      "title": "Beaufort County Council, District 7",
+      "body": "Beaufort County",
+      "email": "logan.cunningham@bcgov.net",
+      "phone": "843.986.4772",
+      "last_name": "Cunningham",
+      "source": "https://www.beaufortcountysc.gov/council/council-members/cunningham-logan.html"
+    },
+    {
+      "name": "Gerald Dawson",
+      "title": "Beaufort County Council, District 1",
+      "body": "Beaufort County",
+      "email": "gdawson@bcgov.net",
+      "phone": "843.986-7265",
+      "last_name": "Dawson",
+      "source": "https://www.beaufortcountysc.gov/council/council-members/dawson-gerald.html"
+    },
+    {
+      "name": "York Glover, Sr.",
+      "title": "Beaufort County Council, District 3",
+      "body": "Beaufort County",
+      "email": "yglover@bcgov.net",
+      "phone": "843.812.2909",
+      "last_name": "Glover",
+      "source": "https://www.beaufortcountysc.gov/council/council-members/glover-york.html"
+    },
+    {
+      "name": "Alice G. Howard",
+      "title": "Beaufort County Council, District 4",
+      "body": "Beaufort County",
+      "email": "ahoward@bcgov.net",
+      "phone": "843.986-7403",
+      "last_name": "Howard",
+      "source": "https://www.beaufortcountysc.gov/council/council-members/howard-alice.html"
+    },
+    {
+      "name": "Mark Lawson",
+      "title": "Beaufort County Council, District 9",
+      "body": "Beaufort County",
+      "email": "markl@bcgov.net",
+      "phone": "843.986.7045",
+      "last_name": "Lawson",
+      "source": "https://www.beaufortcountysc.gov/council/council-members/lawson-mark.html"
+    },
+    {
+      "name": "Lawrence P. McElynn",
+      "title": "Beaufort County Council, District 10",
+      "body": "Beaufort County",
+      "email": "lawrencem@bcgov.net",
+      "phone": "843.941.3519",
+      "last_name": "McElynn",
+      "source": "https://www.beaufortcountysc.gov/council/council-members/mcelynn-larry.html"
+    },
+    {
+      "name": "Joseph Passiment",
+      "title": "Beaufort County Council, District 5",
+      "body": "Beaufort County",
+      "email": "jpassiment@bcgov.net",
+      "phone": "843.592.2299",
+      "last_name": "Passiment",
+      "source": "https://www.beaufortcountysc.gov/council/council-members/passiment-joe.html"
+    },
+    {
+      "name": "Thomas Reitz",
+      "title": "Beaufort County Council, District 11",
+      "body": "Beaufort County",
+      "email": "thomas.reitz@bcgov.net",
+      "phone": "843.941.3931",
+      "last_name": "Reitz",
+      "source": "https://www.beaufortcountysc.gov/council/council-members/reitz-thomas.html"
+    },
+    {
+      "name": "Alan Perry",
+      "title": "Mayor, Town of Hilton Head Island",
+      "body": "Town of Hilton Head Island",
+      "email": "AlanP@hiltonheadislandsc.gov",
+      "phone": "(843) 384-2895",
+      "last_name": "Perry",
+      "aliases": [],
+      "source": "https://hiltonheadislandsc.gov/government/town_council/index.php"
+    },
+    {
+      "name": "Alex Brown",
+      "title": "Mayor Pro-Tem, Hilton Head Island Town Council, Ward 1",
+      "body": "Town of Hilton Head Island",
+      "email": "AlexB@hiltonheadislandsc.gov",
+      "phone": "(843) 290-5943",
+      "last_name": "Brown",
+      "aliases": [],
+      "source": "https://hiltonheadislandsc.gov/government/town_council/index.php"
+    },
+    {
+      "name": "Patsy Brison",
+      "title": "Hilton Head Island Town Council, Ward 2",
+      "body": "Town of Hilton Head Island",
+      "email": "PatsyB@hiltonheadislandsc.gov",
+      "phone": "(843) 384-4181",
+      "last_name": "Brison",
+      "aliases": [],
+      "source": "https://hiltonheadislandsc.gov/government/town_council/index.php"
+    },
+    {
+      "name": "Steve DeSimone",
+      "title": "Hilton Head Island Town Council, Ward 3",
+      "body": "Town of Hilton Head Island",
+      "email": "SteveD@hiltonheadislandsc.gov",
+      "phone": "(854) 272-7115",
+      "last_name": "DeSimone",
+      "aliases": [],
+      "source": "https://hiltonheadislandsc.gov/government/town_council/index.php"
+    },
+    {
+      "name": "Tamara Becker",
+      "title": "Hilton Head Island Town Council, Ward 4",
+      "body": "Town of Hilton Head Island",
+      "email": "TamaraB@hiltonheadislandsc.gov",
+      "phone": "(843) 816-6372",
+      "last_name": "Becker",
+      "aliases": [
+        "Tammy Becker"
+      ],
+      "source": "https://hiltonheadislandsc.gov/government/town_council/index.php"
+    },
+    {
+      "name": "Steve Alfred",
+      "title": "Hilton Head Island Town Council, Ward 5",
+      "body": "Town of Hilton Head Island",
+      "email": "SteveA@hiltonheadislandsc.gov",
+      "phone": "(843) 384-2421",
+      "last_name": "Alfred",
+      "aliases": [],
+      "source": "https://hiltonheadislandsc.gov/government/town_council/index.php"
+    },
+    {
+      "name": "Melinda Tunner",
+      "title": "Hilton Head Island Town Council, Ward 6",
+      "body": "Town of Hilton Head Island",
+      "email": "MelindaT@hiltonheadislandsc.gov",
+      "phone": "(854) 272-7114",
+      "last_name": "Tunner",
+      "aliases": [],
+      "source": "https://hiltonheadislandsc.gov/government/town_council/index.php"
+    },
+    {
+      "name": "Marc Orlando",
+      "title": "Town Manager, Town of Hilton Head Island",
+      "body": "Town of Hilton Head Island",
+      "email": "MarcO@hiltonheadislandsc.gov",
+      "phone": "843-384-2532",
+      "last_name": "Orlando",
+      "aliases": [],
+      "source": "https://hiltonheadislandsc.gov/government/town_council/index.php"
+    },
+    {
+      "name": "Kimberly Gammon",
+      "title": "Town Clerk, Town of Hilton Head Island",
+      "body": "Town of Hilton Head Island",
+      "email": "KimberlyG@hiltonheadislandsc.gov",
+      "phone": "843-341-4701",
+      "last_name": "Gammon",
+      "aliases": [
+        "Kim Gammon"
+      ],
+      "source": "https://hiltonheadislandsc.gov/government/town_council/index.php"
+    },
+    {
+      "name": "Hannah Nichols",
+      "title": "Public Information Officer, Beaufort County (media inquiries)",
+      "body": "Beaufort County",
+      "email": "hannah.nichols@bcgov.net",
+      "phone": "",
+      "last_name": "Nichols",
+      "source": "https://www.beaufortcountysc.gov/public-information/index.html"
+    },
+    {
+      "name": "Van Willis",
+      "title": "Town Manager, Town of Port Royal",
+      "body": "Town of Port Royal",
+      "email": "vwillis@portroyal.org",
+      "phone": "843-986-2205",
+      "last_name": "Willis",
+      "source": "https://www.portroyal.org/171/Town-Council"
+    }
+  ],
+  "offices": {
+    "county_pio": {
+      "name": "Beaufort County Public Information Office",
+      "contact": "Hannah Nichols, hannah.nichols@bcgov.net",
+      "phone": "",
+      "source": "https://www.beaufortcountysc.gov/public-information/index.html"
+    },
+    "county_admin": {
+      "name": "Beaufort County Administration",
+      "contact": "",
+      "phone": "843-255-2000",
+      "source": "https://www.beaufortcountysc.gov/administration/index.html"
+    },
+    "school_district": {
+      "name": "Beaufort County School District",
+      "contact": "",
+      "phone": "843-322-2300",
+      "source": "https://www.beaufortschools.net/about-us/board-of-ed"
+    },
+    "hhi_town_hall": {
+      "name": "Town of Hilton Head Island, Town Hall",
+      "contact": "",
+      "phone": "843-341-4600",
+      "source": "https://hiltonheadislandsc.gov/government/town_council/index.php"
+    },
+    "port_royal": {
+      "name": "Town of Port Royal",
+      "contact": "",
+      "phone": "843-986-2200",
+      "source": "https://www.portroyal.org/171/Town-Council"
+    },
+    "sheriff": {
+      "name": "Beaufort County Sheriff's Office",
+      "contact": "",
+      "phone": "",
+      "source": "https://www.bcso.net/",
+      "note": "Use the contact details on their website (it blocks automated checks, so no number is listed here)."
+    },
+    "solicitor": {
+      "name": "14th Circuit Solicitor's Office",
+      "contact": "",
+      "phone": "",
+      "source": "https://www.scsolicitor14.org/",
+      "note": "Use the contact details on their website."
+    }
+  }
+}

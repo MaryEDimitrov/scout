@@ -1,0 +1,203 @@
+[
+  {
+    "lead_id": "myrtle-park-tracker-change",
+    "lead_type": "Change",
+    "title": "Myrtle Park tracker cost rises $205,223 as change-order approval proceeds",
+    "lead": "The tracker lists $334,147 in May 2021 and $539,370 in April 2022, a $205,223 increase. February 2022 Executive Committee records describe Change Order 2 and say it was forwarded to County Council for approval, while the Council agenda includes it on the consent agenda. The documented approval path means this is a tracker-cost/scope change to examine, not a missing-link claim; compare the tracker increase with the change-order amount and project phases.",
+    "why_it_surfaced": "The tracker total rose by more than $200,000 and the collection also contains an identifiable change-order approval path, offering records to test how the revised cost relates to authorized scope.",
+    "news_values": [
+      "Impact",
+      "Timeliness",
+      "Proximity",
+      "Unusual",
+      "So what",
+      "Verified evidence"
+    ],
+    "evidence": [
+      {
+        "file": "tracker_2021-05-10.pdf",
+        "doc_id": "tracker_2021-05-10",
+        "quote": "Project Cost: $334,147 | Funding Source: Utility Tax Fund",
+        "what_it_shows": "May 2021 baseline tracker cost."
+      },
+      {
+        "file": "tracker_2022-04-01.pdf",
+        "doc_id": "tracker_2022-04-01",
+        "quote": "Project Cost: $539,370 | Funding Source: Utility Tax Fund",
+        "what_it_shows": "April 2022 tracker cost."
+      },
+      {
+        "file": "2022-02-07_exec_minutes_293.pdf",
+        "doc_id": "2022-02-07_exec_minutes_293",
+        "quote": "Motion Approved Without Objection. Status: Forward to County Council for approval.",
+        "what_it_shows": "Executive Committee recommended the change order and forwarded it to Council."
+      },
+      {
+        "file": "2022-02-28_council_agenda_473.pdf",
+        "doc_id": "2022-02-28_council_agenda_473",
+        "quote": "RECOMMENDATION TO APPROVE CHANGE ORDER 2 TO MYRTLE PARK COMMERCIAL SITE DEVELOPMENT (IFB 021121E)",
+        "what_it_shows": "Council agenda placed Change Order 2 on the consent agenda."
+      }
+    ],
+    "searched_for": "Searched Myrtle Park Commercial Site Development, IFB 021121E, the $334,147 and $539,370 tracker figures, and Change Order 2. Records show a committee motion forwarding the change order and its appearance on the Council consent agenda; approval is not asserted from the agenda alone.",
+    "alternative_explanation": "The later tracker figure may include the Change Order 2 work plus other project costs, phases, or accounting adjustments; the committee recommendation may also not have been adopted by Council.",
+    "next_steps": [
+      "Read the February 28, 2022 Council minutes to establish the disposition of the consent-agenda item.",
+      "Obtain the original Myrtle Park contract, Change Order 2, and the project cost ledger showing how the $555,551.26 total was calculated.",
+      "Ask Public Works or procurement staff to reconcile the tracker amounts of $334,147 and $539,370 with the change order and its funding source.",
+      "Review later tracker snapshots or closeout records for a revised project total."
+    ],
+    "skeptic_note": "The May 2021 and April 2022 tracker figures differ, and the Executive Committee passage states that Change Order 2 was moved forward with a stated total of $555,551.26, funded from utility tax credits. The committee approved forwarding it, but the Council agenda alone does not establish final Council approval. The records do not show that the $205,223 tracker difference is identical to the change-order amount; no cited document explains that relationship. Keep as a cost-change reconciliation lead, not as a missing-approval claim.",
+    "amount_before": "$334,147",
+    "amount_after": "$539,370",
+    "dollar_change": 205223.0,
+    "quotes_removed": 0,
+    "confidence": "Preliminary, not independently verified"
+  },
+  {
+    "lead_id": "battery-creek-pool-cost",
+    "lead_type": "Change",
+    "title": "Battery Creek Pool tracker cost rises above the recorded award amount",
+    "lead": "The November 2021 tracker lists $52,950 and the April 2022 tracker $86,000, while June 2021 Public Facilities minutes record a $67,850 award recommendation to Andersen Pool Plastering. The tracker change is more than $30,000; the award record provides a distinct comparison point, but contingency, later scope, or separate cost categories could explain the figures.",
+    "why_it_surfaced": "Tracker cost increased by $33,050 after a recorded award recommendation, leaving a documented difference worth reconciling against contract, contingency, and any subsequent scope.",
+    "news_values": [
+      "Impact",
+      "Timeliness",
+      "Proximity",
+      "Unusual",
+      "So what",
+      "Verified evidence"
+    ],
+    "evidence": [
+      {
+        "file": "tracker_2021-11-05.pdf",
+        "doc_id": "tracker_2021-11-05",
+        "quote": "Project Cost: $52,950 | Funding Source: GO Bond | Project Status: Pre- Contruction",
+        "what_it_shows": "November tracker cost and pre-construction status."
+      },
+      {
+        "file": "tracker_2022-04-01.pdf",
+        "doc_id": "tracker_2022-04-01",
+        "quote": "Project Cost: $86,000 | Funding Source: GO Bond | Project Status: Under Construction",
+        "what_it_shows": "April tracker cost and construction status."
+      },
+      {
+        "file": "2021-06-21_pubfac_minutes_117.pdf",
+        "doc_id": "2021-06-21_pubfac_minutes_117",
+        "quote": "RECOMMENDATION OF AWARD IFB#051121E BATTERY CREEK POOL RESURFACING ($67,850)",
+        "what_it_shows": "Public Facilities recorded an award recommendation amount of $67,850."
+      },
+      {
+        "file": "2021-06-21_pubfac_minutes_117.pdf",
+        "doc_id": "2021-06-21_pubfac_minutes_117",
+        "quote": "The Vote -The motion was approved without objection. RECOMMENDATION OF AWARD IFB#051121E BATTERY CREEK POOL RESURFACING ($67,850)",
+        "what_it_shows": "Committee minutes state the recommendation motion was approved."
+      }
+    ],
+    "searched_for": "Looked up Battery Creek Pool Resurfacing, IFB#051121E, the $52,950 and $86,000 tracker figures, and the $67,850 award amount. The collection contains a Public Facilities award recommendation but the project-name results show no later project-specific change-order record; that absence is limited to this curated collection.",
+    "alternative_explanation": "The tracker may reflect a total budget including contingency, additional work, fees, or a later phase, while the $67,850 figure is only the award recommendation; Council or administrative approvals may also be in records outside this curated collection.",
+    "next_steps": [
+      "Locate the Council disposition of the June 2021 award recommendation and the executed contract amount.",
+      "Request the Battery Creek Pool project budget, contingency, invoices, and any change orders through completion.",
+      "Ask County facilities staff to reconcile the $67,850 award recommendation with tracker totals of $52,950 and $86,000.",
+      "Check procurement records for scope changes, permitting costs, or separate contracts associated with the resurfacing."
+    ],
+    "skeptic_note": "The November and April tracker figures show a $33,050 increase and a status change from pre-construction to under construction. The June minutes record a $67,850 award recommendation and its committee vote, but do not establish the final contract amount or explain the later tracker amount. No supplied passage shows that contingency or a change order accounts for the difference. It is a comparison worth checking; the award recommendation may be an earlier bid-stage amount rather than the full project budget.",
+    "amount_before": "$52,950",
+    "amount_after": "$86,000",
+    "dollar_change": 33050.0,
+    "quotes_removed": 0,
+    "confidence": "Preliminary, not independently verified"
+  },
+  {
+    "lead_id": "arthur-horne-overage",
+    "lead_type": "Change",
+    "title": "Arthur Horne construction overage proposed while tracker remains at $6.78 million",
+    "lead": "March 2022 Finance material identifies a $900,000 Arthur Horne construction overage and proposes an operating-surplus appropriation, while the April tracker continues to show a $6,775,812 project cost. The records juxtapose a specific overage proposal with an unchanged tracker total; check whether the proposal was approved, whether it covers the same construction scope and period, and whether it was incorporated into a later tracker.",
+    "why_it_surfaced": "A $900,000 overage in March Finance records is not reflected as a changed total in the April tracker; the records allow comparison without assuming the proposal became an approved expenditure.",
+    "news_values": [
+      "Impact",
+      "Prominence",
+      "Timeliness",
+      "Unusual",
+      "So what",
+      "Verified evidence"
+    ],
+    "evidence": [
+      {
+        "file": "2022-03-21_finance_minutes_360.pdf",
+        "doc_id": "2022-03-21_finance_minutes_360",
+        "quote": "Arthur Horne Building construction overage, the emergency purchase of EMS equipment, and detention center deferred maintenance.",
+        "what_it_shows": "Finance minutes refer to the construction overage among amendment matters."
+      },
+      {
+        "file": "tracker_2022-04-01.pdf",
+        "doc_id": "tracker_2022-04-01",
+        "quote": "Project Cost: $6,775,812 | Funding Source: GO Bond",
+        "what_it_shows": "April tracker still lists the project at $6,775,812."
+      }
+    ],
+    "searched_for": "Looked up Arthur Horne Office Building and Arthur Horne Building across the 27-document collection, including tracker snapshots and March 2022 Finance material. The lookup found no Council approval entry for the $900,000 in the project-name search results; the Finance packet/minutes show a proposal context, not proof of final Council approval.",
+    "alternative_explanation": "The $900,000 may be an operating-surplus funding request or project-specific overage that is separate from the GO-bond tracker total, rather than an increase to the total project cost; it may also have been proposed but not approved.",
+    "next_steps": [
+      "Retrieve the full March 21 Finance packet and amendment backup to identify what the $900,000 covers and its basis.",
+      "Check the February 28 Council minutes and subsequent Council records for the fiscal-year 2022 amendment and any approval or revision.",
+      "Request the Arthur Horne contract, change orders, contingency schedule, and current project budget from County procurement or facilities staff.",
+      "Ask County finance staff how the operating-surplus proposal relates to the tracker\u2019s GO Bond project cost."
+    ],
+    "skeptic_note": "The source minutes support a proposed use of operating surplus for an Arthur Horne construction overage; the April tracker lists $6,775,812 but does not show whether the proposal was approved or incorporated. The packet quote supplied by the Connector was not found verbatim, so rely on the minutes and tracker rather than that quote. This is not a confirmed cost increase: determine whether the overage is an additional contract/scope amount or a funding amendment, and whether Council acted. No cited document resolves those questions.",
+    "amount_before": "",
+    "amount_after": "",
+    "dollar_change": null,
+    "quotes_removed": 1,
+    "confidence": "Preliminary, not independently verified"
+  },
+  {
+    "lead_id": "ems-station-31-cost-jump",
+    "lead_type": "Change",
+    "title": "EMS Station 31 tracker total more than doubles between December and January",
+    "lead": "The December 2020 tracker lists $1,650,547 and the January 2021 tracker lists $3,585,813 for the joint EMS/fire station, an increase of $1,935,266. The tracker snapshots do not explain the jump. No project-specific approval was returned by the project-name lookup, but the collection is curated and prior approvals may fall outside its coverage; distinct phases or funding shares also remain possible explanations.",
+    "why_it_surfaced": "Two consecutive tracker snapshots show a large unexplained increase for a locally situated joint emergency-services facility, with no matching approval returned by the project-name search.",
+    "news_values": [
+      "Impact",
+      "Proximity",
+      "Unusual",
+      "So what",
+      "Verified evidence"
+    ],
+    "evidence": [
+      {
+        "file": "tracker_2020-12-04.pdf",
+        "doc_id": "tracker_2020-12-04",
+        "quote": "Project Cost: $1,650,547 | Funding Source: GO Bonds / Bluffton Township Fire Department",
+        "what_it_shows": "December tracker baseline and funding-source description."
+      },
+      {
+        "file": "tracker_2021-01-08.pdf",
+        "doc_id": "tracker_2021-01-08",
+        "quote": "Project Cost: $3,585,813 | Funding Source: GO Bonds / Bluffton Township Fire Department",
+        "what_it_shows": "January tracker shows the larger project cost."
+      },
+      {
+        "file": "tracker_2021-01-08.pdf",
+        "doc_id": "tracker_2021-01-08",
+        "quote": "Description: Construction of joint EMS and Fire Station located on Riverside, Bluffton",
+        "what_it_shows": "The tracker describes the project as a joint EMS and fire station in Bluffton."
+      }
+    ],
+    "searched_for": "Looked up EMS Station 31, joint EMS/fire station, and the $1,650,547 and $3,585,813 figures across all 27 collection documents. The project-name results contain only tracker mentions and no approval or funding action located under that name; this is not evidence that no action exists elsewhere.",
+    "alternative_explanation": "The January figure could reflect a revised full-project estimate, added scope or phase, or a combined funding share that was not included in the December snapshot; a related approval may be outside this collection or filed under a different description.",
+    "next_steps": [
+      "Request the Station 31 project budget history and the supporting estimate or cost breakdown for both tracker totals.",
+      "Search Council and committee agendas, resolutions, and procurement records for the station, Riverside, Bluffton, and joint EMS/fire facility under alternate project names.",
+      "Ask County facilities and the Bluffton Township Fire District to explain the change in total and the funding split.",
+      "Review the design/construction contract, scope, and any amendments or intergovernmental funding agreements."
+    ],
+    "skeptic_note": "The December 4 and January 8 tracker passages identify the same project name, description, and funding-source wording, while the listed cost changes from $1,650,547 to $3,585,813. The cited records do not explain the large change. The collection is curated and does not establish that an approval is absent from all county records; an earlier or separately filed action, distinct phases, or a shared funding component remain possible. Keep as an unexplained tracker change, not a missing-link conclusion.",
+    "amount_before": "$1,650,547",
+    "amount_after": "$3,585,813",
+    "dollar_change": 1935266.0,
+    "quotes_removed": 0,
+    "confidence": "Preliminary, not independently verified"
+  }
+]

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="156" height="188" viewBox="0 -8 78 94">
+  <style>
+    .scribble { stroke-dasharray: 120; stroke-dashoffset: 120; animation: write 2.4s ease-in-out infinite; }
+    .l2 { animation-delay: .8s; } .l3 { animation-delay: 1.6s; }
+    .pencil { animation: move 2.4s ease-in-out infinite; }
+    @keyframes write { 0% { stroke-dashoffset: 120; } 45%, 80% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+    @keyframes move { 0% { transform: translate(0px, 0px); } 15% { transform: translate(14px, 2px); }
+                      30% { transform: translate(28px, -1px); } 45% { transform: translate(40px, 2px); }
+                      60% { transform: translate(16px, 22px); } 75% { transform: translate(34px, 24px); }
+                      100% { transform: translate(0px, 0px); } }
+  </style>
+  <rect x="6" y="10" width="54" height="70" rx="3" fill="#FFFFFF" stroke="#121212" stroke-width="2"/>
+  <line x1="6" y1="20" x2="60" y2="20" stroke="#A6192E" stroke-width="1.5"/>
+  <circle cx="16" cy="10" r="2.6" fill="#FFFFFF" stroke="#121212" stroke-width="1.6"/>
+  <circle cx="26" cy="10" r="2.6" fill="#FFFFFF" stroke="#121212" stroke-width="1.6"/>
+  <circle cx="36" cy="10" r="2.6" fill="#FFFFFF" stroke="#121212" stroke-width="1.6"/>
+  <circle cx="46" cy="10" r="2.6" fill="#FFFFFF" stroke="#121212" stroke-width="1.6"/>
+  <line x1="12" y1="32" x2="54" y2="32" stroke="#D9D9D9" stroke-width="1"/>
+  <line x1="12" y1="44" x2="54" y2="44" stroke="#D9D9D9" stroke-width="1"/>
+  <line x1="12" y1="56" x2="54" y2="56" stroke="#D9D9D9" stroke-width="1"/>
+  <line x1="12" y1="68" x2="54" y2="68" stroke="#D9D9D9" stroke-width="1"/>
+  <path class="scribble" d="M13 30 q4 -5 8 0 t8 0 t8 0 t8 0 t8 0" fill="none" stroke="#121212" stroke-width="1.6"/>
+  <path class="scribble l2" d="M13 42 q4 -5 8 0 t8 0 t8 0 t8 0" fill="none" stroke="#121212" stroke-width="1.6"/>
+  <path class="scribble l3" d="M13 54 q4 -5 8 0 t8 0 t8 0 t8 0 t6 0" fill="none" stroke="#121212" stroke-width="1.6"/>
+  <g class="pencil">
+    <g transform="translate(32 -2) rotate(35)">
+      <rect x="0" y="0" width="7" height="30" fill="#A6192E" stroke="#121212" stroke-width="1.2"/>
+      <rect x="0" y="-5" width="7" height="5" fill="#E8A0AC" stroke="#121212" stroke-width="1.2"/>
+      <path d="M0 30 L3.5 38 L7 30 Z" fill="#F3D9A4" stroke="#121212" stroke-width="1.2"/>
+      <path d="M2.4 35.5 L3.5 38 L4.6 35.5 Z" fill="#121212"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+=== Page 1 ===
+BEAUFORT COUNTY CONSTRUCTION MANAGMENT CAPITAL IMPROVEMENT PROJECTS
+## CONSTRUCTION Updated March 5, 2021
+Project Name: Arthur Horne Office Building | Description: Construction of approximately 24,000sf of office space at the Beaufort County Government Complex | Project Cost: $6,775,812 | Funding Source: GO Bond | Project Status: Under Construction
+Project Name: EMS Station 31 | Description: Construction of joint EMS and Fire Station located on Riverside, Bluffton | Project Cost: $3,585,813 | Funding Source: GO Bonds / Bluffton Township Fire Department | Project Status: Under Construction
+Project Name: DNA Laboratory Addition | Description: Construction of a 1970sf, single-story office building addition for the existing Beaufort County Sheriff’s Office DNA Laboratory | Project Cost: $389,693 | Funding Source: BCSO | Project Status: Under Construction
+Project Name: Sam’s Point Turn Lane | Description: Construction of a right turn lane at SC 802 and US 21 on Lady’s Island | Project Cost: $494,711 | Funding Source: 2018 One Cent Sales Tax | Project Status: Under Construction
+Project Name: Contract #51 Dirt Road Paving | Description: Paving various County roads as approved by County Transportation Committee | Project Cost: $2,096,162 | Funding Source: TAG Fees | Project Status: Under Construction
+Project Name: ADA Ramp Improvements | Description: Ramp installation for sidewalk at the intersections of Ninth Avenue at Red Cedar. Installation of pedestrian crosswalk signals. | Project Cost: $27,451 | Funding Source: TAG Fees | Project Status: Under Construction
+Project Name: Bluffton Library Renovation | Description: Renovation the existing Adult Fiction, A/V collection and the Young Adult collection area into the new children’s area | Project Cost: $479,381 | Funding Source: Bluffton Library Impact Fees | Project Status: Under Construction
+Project Name: Beaufort County Year 4 Resurfacing | Description: Resurfacing various County roads as approved by County Transportation Committee | Project Cost: $1,391,620 | Funding Source: C Fund | Project Status: Executing Contract
+Project Name: Beaufort County Year 4 Rejuvenator | Description: Rejuvenator treatment on Bluffton Parkway and Buckwalter Parkway | Project Cost: $191,777 | Funding Source: C Fund | Project Status: Executing Contract
+Project Name: Pavement Condition Survey | Description: Evaluation of the pavement conditions for County, Municipality, and SCDOT State Secondary Roads | Project Cost: $272,400 | Funding Source: C Fund | Project Status: Executing Contract
+## DESIGN
+Project Name: Spanish Moss Trail | Description: Extension of Spanish Moss Trail from Smilax Drive to 15th Street in Port Royal | Project Cost: $196,000 | Funding Source: Accommodations Tax | Project Status: In Design
+Project Name: Ribaut Traffic Analysis | Description: An analysis of Ribaut Road Traffic | Project Cost: $46,436 | Funding Source: NOB Road Impact Fees | Project Status: In Design
+## IN DEVELOPMENT
+Project Name: Sun City Fire Station & EMS | Description: Renovations of and addition to the existing Fire Station and EMS facility located at 25 William Pope Dr., Bluffton | Project Status: Planning
+Project Name: Tennis Court Renovation | Description: Improvements at Tennis Court at the corner of Boundary Street and Bladen Street to improve drainage, ADA access, court surfaces and fencing. | Project Status: Planning
+Project Name: Buckwalter Recreation Athletic Complex Expansion | Description: Planning, engineering, design and preparation of all construction documents for new soccer fields and tennis courts | Project Status: Recommendation of Award Public Facilities Committee 03/15/2021
+Project Name: Contract #52 Dirt Road Paving | Description: Paving various County roads as approved by County Transportation Committee | Project Status: Recommendation of Award Public Facilities Committee 03/15/21
+Project Name: Bluffton Pool Resurfacing | Description: Resurfacing to the Bluffton pool located at 55 Pritchard Street | Project Status: Recommendation of Award Public Facilities Committee 04/19/21
+Project Name: Myrtle Park Commercial Site Development | Description: Site preparation for future commercial development at Myrtle Park located in Bluffton, SC. | Project Status: Evaluating Proposals
+Project Name: Battery Creek Bridge – Spanish Moss Trail | Description: Repairs to the Battery Creek Bridge along the Spanish Moss Trail | Project Status: Pending A/H Tax Application
+Project Name: Broad River Fishing Pier | Description: Permitting and Design of the new pier structure at the current location of the Broad River Fishing Pier | Project Status: Pending A/H Tax Application

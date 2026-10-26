@@ -1,0 +1,11 @@
+=== Page 1 ===
+SYNTHETIC TEST DOCUMENT - not a real public record. Made up for testing the app.
+PORT HARLOW COUNTY CAPITAL IMPROVEMENT PROJECTS
+## CONSTRUCTION Updated April 7, 2023
+Project Name: Marsh Road Fire Station | Description: Construction of a new two-bay fire station on Marsh Road, Port Harlow | Project Cost: $3,400,000 | Funding Source: GO Bond | Project Status: Under Construction
+Project Name: Riverside Library Annex | Description: Construction of a 6,000sf annex to the Riverside branch library | Project Cost: $1,240,000 | Funding Source: Library Impact Fees | Project Status: Under Construction
+Project Name: Oak Street Sidewalks | Description: New sidewalks on both sides of Oak Street from 2nd Avenue to Mill Road | Project Cost: $431,500 | Funding Source: TAG Fees | Project Status: Under Construction
+Project Name: Harbor Park Pavilion | Description: Construction of a covered event pavilion and restrooms at Harbor Park | Project Cost: $640,000 | Funding Source: Parks Impact Fees | Project Status: Under Construction
+Project Name: Countywide Paving Year 2 | Description: Resurfacing of county roads approved by the Transportation Committee | Project Cost: $1,150,000 | Funding Source: C Fund | Project Status: Under Construction
+Project Name: Emergency Operations Center Roof | Description: Replacement of the roof at the Emergency Operations Center | Project Cost: $310,000 | Funding Source: General Fund | Project Status: Under Construction
+Project Name: Northside Community Center HVAC | Description: Replacement of HVAC units at the Northside Community Center, 14 Pine Street | Project Cost: $520,000 | Funding Source: GO Bond | Project Status: Pre-Construction

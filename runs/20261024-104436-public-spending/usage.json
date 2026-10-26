@@ -1,0 +1,38 @@
+[
+  {
+    "agent": "Scout",
+    "calls": 4,
+    "input_tokens": 60141,
+    "cached_input_tokens": 39835,
+    "cache_write_tokens": 20165,
+    "output_tokens": 1917,
+    "app_cache_hits": 0
+  },
+  {
+    "agent": "Connector",
+    "calls": 5,
+    "input_tokens": 50304,
+    "cached_input_tokens": 38192,
+    "cache_write_tokens": 12097,
+    "output_tokens": 2842,
+    "app_cache_hits": 0
+  },
+  {
+    "agent": "Skeptic",
+    "calls": 2,
+    "input_tokens": 16148,
+    "cached_input_tokens": 8047,
+    "cache_write_tokens": 8095,
+    "output_tokens": 2162,
+    "app_cache_hits": 0
+  },
+  {
+    "agent": "TOTAL",
+    "calls": 11,
+    "input_tokens": 126593,
+    "cached_input_tokens": 86074,
+    "cache_write_tokens": 40357,
+    "output_tokens": 6921,
+    "app_cache_hits": 0
+  }
+]

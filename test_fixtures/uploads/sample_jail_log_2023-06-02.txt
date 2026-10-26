@@ -1,0 +1,7 @@
+SYNTHETIC TEST DOCUMENT - not a real jail log. Made up for testing the app. All names are fictional.
+PORT HARLOW COUNTY DETENTION CENTER - DAILY BOOKING LOG - June 2, 2023
+
+Booking 23-1187 | Name: Thomas Pruitt | Age: 54 | Booked: 06/02/2023 01:12 | Arresting agency: Port Harlow Police Department | Charges: Driving under the influence, 1st offense | Bond: $1,092 | Status: Released on bond
+Booking 23-1188 | Name: Kayla Mendez | Age: 23 | Booked: 06/02/2023 03:40 | Arresting agency: Port Harlow County Sheriff's Office | Charges: Shoplifting, value $200 or less | Bond: $0 (personal recognizance) | Status: Released
+Booking 23-1189 | Name: Darnell Hughes | Age: 37 | Booked: 06/02/2023 09:05 | Arresting agency: Port Harlow County Sheriff's Office | Charges: Breach of trust with fraudulent intent, value $10,000 or more (2 counts); Forgery | Bond: $50,000 | Status: In custody | Employer listed: Coastal Asphalt
+Booking 23-1190 | Name: Robert Lin | Age: 45 | Booked: 06/02/2023 11:30 | Arresting agency: Port Harlow Police Department | Charges: Driving under suspension, 2nd offense | Bond: $257 | Status: Released on bond
