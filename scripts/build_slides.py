@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SHOTS = Path(__file__).resolve().parent.parent / "docs" / "screenshots"
 
 # ---- settings to fill in -------------------------------------------------------------------------
-REPO_URL = ""          # e.g. "https://github.com/your-username/scout" (required by the professor)
+REPO_URL = "https://github.com/MaryEDimitrov/scout"  # e.g. "https://github.com/your-username/scout" (required by the professor)
 REPO_PRIVATE = False   # True if the repo is private (then add GitHub user zlisto as a collaborator)
 USER_TEST = ""         # e.g. "By hand: 0 of 5 leads in 20 min · With Scout: 3 leads in 2 min" (after colleagues test)
 USER_QUOTE = ""        # e.g. '"I would use this every week." (former colleague, The Island Packet)'
