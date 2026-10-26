@@ -56,9 +56,9 @@ python3 -m venv .venv
 Then read the lead cards; **Possible leads Scout set aside, and why** lists what the Skeptic or the
 code checks dismissed.
 
-**For grading:** open **http://localhost:8501/?dev=1** instead. Reporters never see this view; it adds
-the **run trace** (every step each agent took), **token and cost counts** for that run, and testing
-switches (fresh run, synthetic test documents) in the side panel.
+**For grading:** the app shows reporters only the leads. The step-by-step **run trace** for every
+search is saved to `runs/<run>/trace.md`, and token counts and costs come from the scripts below
+(`scripts/run_once.py` prints them after each search; `scripts/cost_report.py` totals them).
 
 **Optional:** drag your own meeting minutes or agendas (PDF with selectable text, or .txt) into
 **Add your own meeting minutes**. They are scanned together with the county collection for that run,
@@ -163,5 +163,5 @@ docs/                   report.html, slides.html, user-study materials
 
 - "Missing" means "not found in this collection". Council records from April–November 2020 are not
   online, so approvals from that period cannot be checked.
-- Results vary somewhat from run to run; the set-aside list and the run trace (`?dev=1`, or `runs/<run>/trace.md`) show the reasoning each time.
+- Results vary somewhat from run to run; the set-aside list and the run trace (`runs/<run>/trace.md`) show the reasoning each time.
 - Leads are starting points for reporting, never findings.

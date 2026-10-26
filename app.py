@@ -15,7 +15,6 @@ import streamlit as st
 
 from leads import config
 from leads.contacts import contacts_for
-from leads.costs import cost_usd, prices_set
 from leads.coverage import CoverageUnavailable, fetch_coverage, overlapping
 from leads.documents import DocumentStore
 from leads.pipeline import run_investigation
@@ -337,12 +336,7 @@ state.setdefault("files", {})  # file name -> bytes, added by the reporter
 state.setdefault("uploader_key", 0)
 state.setdefault("samples", set())  # optional document sets the reporter added
 
-fresh = fixtures = False
-if st.query_params.get("dev") == "1":  # testing switches for grading only; reporters never see them
-    with st.sidebar:
-        st.markdown("**Testing options**")
-        fresh = st.toggle("Fresh run (skip saved results, to measure cost)", value=False)
-        fixtures = st.toggle("Use the made-up test documents instead of the real records", value=False)
+fresh = fixtures = False  # the app always uses the real records; scripts/run_once.py has --fresh and --fixtures
 
 
 def go(step: str):
@@ -609,37 +603,6 @@ with page.container():
             for key in ("beat", "files", "result", "coverage", "coverage_note", "samples"):
                 state.pop(key, None)
             go("beat")
-
-        # Run details (trace and token counts) are for the report and grading only: hidden from reporters.
-        # Open the app with ?dev=1 at the end of the address to see them.
-        if st.query_params.get("dev") == "1":
-          with st.expander("Run details (hidden page: trace and token counts)", expanded=True):
-              tab_trace, tab_cost = st.tabs(["Run trace", "Tokens & cost"])
-              with tab_trace:
-                  trace_file = result.run_dir / "trace.json"
-                  if trace_file.exists():
-                      events = json.loads(trace_file.read_text())
-                      st.caption(f"Every step of run {result.run_id}: which agent did what, and what it passed along. "
-                                 f"Saved to runs/{result.run_id}/trace.md")
-                      st.dataframe([{"Step": e["step"], "Time": e["time"], "Who": e["actor"], "What": e["kind"],
-                                     "Detail": e["summary"]} for e in events], hide_index=True, width="stretch")
-              with tab_cost:
-                  rows = []
-                  for r in result.usage_summary:
-                      cost = cost_usd(r["input_tokens"], r["cached_input_tokens"], r["output_tokens"])
-                      rows.append({"Agent": r["agent"], "Model calls": r["calls"], "Input tokens": r["input_tokens"],
-                                   "…of which cached": r["cached_input_tokens"], "Output tokens": r["output_tokens"],
-                                   "App-cache hits": r["app_cache_hits"],
-                                   "Cost (USD)": f"${cost:.4f}" if cost is not None else "price not set"})
-                  st.dataframe(rows, hide_index=True, width="stretch")
-                  total = result.usage_summary[-1] if result.usage_summary else None
-                  if total and total["input_tokens"]:
-                      st.caption(f"{total['cached_input_tokens'] / total['input_tokens']:.0%} of input tokens were served "
-                                 "from the provider's prompt cache. App-cache hits are repeat requests answered at no cost.")
-                  if not prices_set():
-                      st.caption("Dollar costs appear once the gpt-6-luna prices are set at the bottom of leads/config.py.")
-                  st.caption(f"Model: {config.MODEL} · Token budget per run: {config.TOKEN_BUDGET_PER_RUN:,} · Tool-call "
-                             f"limits: {config.MAX_TOOL_CALLS_PER_AGENT} per agent, {config.MAX_TOOL_CALLS_PER_RUN} per run")
 
 st.html('<div class="footer">Scout points to records worth checking. Its leads are not findings and never an '
         'accusation of wrongdoing. Confirm everything with the original documents and the people involved.</div>')
