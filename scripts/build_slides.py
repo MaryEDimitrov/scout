@@ -162,7 +162,6 @@ SLIDES = f"""
     </ul>
     <img src="{art('beats/public-safety.svg')}" class="scout-side" alt="">
   </div>
-  <p class="note">82 automated tests. None of them need an API key.</p>
 </section>
 
 <section class="title last">
