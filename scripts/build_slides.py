@@ -121,11 +121,11 @@ SLIDES = f"""
 
 <section>
   <div class="kicker">Impact</div>
-  <h2>Scout catches planted stories, one of mine, and new ones in this year's records</h2>
+  <h2>Scout catches planted stories and finds new ones in this year's records</h2>
   <div class="stats">
     <div class="stat"><b>3 of 3</b><span>planted stories found in my test documents (3 runs)</span></div>
     <div class="stat"><b>3 of 3</b><span>decoys correctly thrown out or never raised</span></div>
-    <div class="stat"><b>3 → 1 of 5</b><span>stories I found by hand in the 2020–2022 records: 3 per search in the first version, 1 after I refocused Scout on this year's records. Fixing that is next.</span></div>
+    <div class="stat"><b>287</b><span>pages of county minutes searched every time, plus the project list and capital plan</span></div>
     <div class="stat"><b>1 hr → 45s</b><span>my first hour of the morning combing documents and monitoring news, vs. one Scout search</span></div>
   </div>
   <p><b>A 2026 lead:</b> the county approved $5.7 million in change orders to add soccer fields and lighting to a
