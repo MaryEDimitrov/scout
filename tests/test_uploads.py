@@ -11,7 +11,7 @@ The Council approved a contract for beach renourishment in the amount of $4,250,
 def test_uploaded_minutes_join_the_real_collection(tmp_path):
     text_dir, report = build_collection([("HHI council minutes.txt", MINUTES)], uploads_root=tmp_path)
     store = DocumentStore(text_dir)
-    assert len(store.docs) == len(DocumentStore(config.REAL_DATA_DIR).docs) + 1
+    assert len(store.docs) == len(DocumentStore(config.CURRENT_DATA_DIR).docs) + 1
     doc = store.get(report[0]["doc_id"])
     assert doc.doc_type == "Uploaded by the journalist"
     assert doc.date == "2023-03-07"  # found in the text
@@ -36,7 +36,7 @@ def test_real_pdf_upload_is_read(tmp_path):
 
 def test_shipped_documents_still_point_to_their_pdfs(tmp_path):
     text_dir, _ = build_collection([("hhi.txt", MINUTES)], uploads_root=tmp_path)
-    assert DocumentStore(text_dir).get("tracker_2022-04-01").source_file == "tracker_2022-04-01.pdf"
+    assert DocumentStore(text_dir).get("2026-01-12_council_minutes_1544").source_file == "2026-01-12_council_minutes_1544.pdf"
 
 
 def test_pdf_without_text_gets_a_plain_warning(tmp_path):
@@ -50,9 +50,9 @@ def test_file_names_cannot_escape_the_upload_folder():
 
 
 def test_shipped_data_is_never_changed(tmp_path):
-    before = sorted(p.name for p in config.REAL_DATA_DIR.rglob("*"))
+    before = sorted(p.name for p in config.CURRENT_DATA_DIR.rglob("*"))
     build_collection([("hhi.txt", MINUTES)], uploads_root=tmp_path)
-    assert sorted(p.name for p in config.REAL_DATA_DIR.rglob("*")) == before
+    assert sorted(p.name for p in config.CURRENT_DATA_DIR.rglob("*")) == before
 
 
 ROSTER = config.PROJECT_DIR / "test_fixtures" / "uploads" / "sample_jail_roster.html"
@@ -115,10 +115,19 @@ def test_quotes_from_an_optional_set_can_be_verified(tmp_path):
 
 
 def test_added_documents_are_marked_and_searched_newest_first(tmp_path):
-    text_dir, _ = build_collection([], uploads_root=tmp_path, sample_sets=["county_recent"])
+    text_dir, _ = build_collection([], uploads_root=tmp_path, sample_sets=["hilton_head"])
     store = DocumentStore(text_dir)
     listing = {d["doc_id"]: d["added_by_journalist"] for d in tools.list_documents(store)["documents"]}
-    assert listing["tracker_2022-04-01"] is False
-    assert any(added for doc_id, added in listing.items() if doc_id.startswith("2026-"))
-    dates = [r["date"] for r in tools.search_documents(store, "County Council")["results"]]
+    assert listing["2026-01-12_council_minutes_1544"] is False  # built-in county minutes
+    assert listing["2026-01-13_hhi-town-council_regular_minutes_1072"] is True
+    dates = [r["date"] for r in tools.search_documents(store, "Council")["results"]]
     assert dates == sorted(dates, reverse=True) and dates[0].startswith("2026")
+
+
+def test_the_2020_2022_archive_joins_with_its_project_lists_and_pdfs(tmp_path):
+    text_dir, _ = build_collection([], uploads_root=tmp_path, sample_sets=["county_archive"])
+    store = DocumentStore(text_dir)
+    trackers = [d for d in store.docs.values() if d.doc_type.startswith("Capital project tracker")]
+    assert len(trackers) == 7 and all(d.source_file.endswith(".pdf") for d in trackers)
+    assert store.get("2026-01-12_council_minutes_1544").source_file.endswith(".pdf")
+    assert "December 2020 to April 2022" in store.notes  # the archive's own notes come along

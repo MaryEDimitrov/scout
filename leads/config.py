@@ -8,10 +8,13 @@ PORTKEY_BASE_URL = "https://api.portkey.ai/v1"
 API_KEY_NAME = "PORTKEY_API_KEY"
 # gpt-6-luna only allows tool calling on /chat/completions (the HW1 endpoint) with reasoning turned off.
 REASONING_EFFORT = "none"
+MODEL_TIMEOUT_SECONDS = 90  # one AI call normally takes seconds; a stalled call fails instead of hanging forever
+MODEL_RETRIES = 1  # one automatic retry after a timeout or dropped connection
 
 # --- Folders ---
 PROJECT_DIR = Path(__file__).resolve().parent.parent
-REAL_DATA_DIR = PROJECT_DIR / "data" / "text"  # real Beaufort County records
+CURRENT_DATA_DIR = PROJECT_DIR / "data" / "current" / "text"  # real county records, Oct 2025 – Oct 2026 (default)
+ARCHIVE_DATA_DIR = PROJECT_DIR / "data" / "text"  # real county records, Dec 2020 – Apr 2022, with project lists
 FIXTURE_DATA_DIR = PROJECT_DIR / "test_fixtures" / "text"  # synthetic test documents
 RUNS_DIR = PROJECT_DIR / "runs"  # token logs and run traces
 
@@ -21,14 +24,20 @@ JAIL_ROSTER_URL = "https://apps.beaufortcountysc.gov/inmate-inquiry/?source=book
 # --- Optional document sets a reporter can add with one click (real records, shipped in data/samples/) ---
 SAMPLES_DIR = PROJECT_DIR / "data" / "samples"
 SAMPLE_SETS = {
-    "county_recent": {"label": "Beaufort County Council and committee minutes", "dates": "Oct 2025 – Oct 2026",
-                      "beats": ["Growth & development", "Local government", "Education",
-                                "Environment & climate", "Transportation", "Housing", "Public safety"]},
+    "county_archive": {"label": "Beaufort County project lists and Council minutes (archive)",
+                       "dates": "Dec 2020 – Apr 2022", "text_dir": ARCHIVE_DATA_DIR,
+                       "beats": ["Public spending", "Growth & development", "Local government", "Education",
+                                 "Environment & climate", "Transportation", "Housing", "Public safety"]},
     "hilton_head": {"label": "Hilton Head Island Town Council minutes", "dates": "Nov 2025 – Sep 2026",
                     "beats": ["Local government", "Growth & development", "Housing"]},
     "school_board": {"label": "Beaufort County School District board agendas", "dates": "Oct 2025 – Oct 2026",
                      "beats": ["Education"]},
 }
+
+
+def sample_text_dir(name: str) -> Path:
+    """Where an optional set's text files live (the archive keeps its original data/text folder)."""
+    return SAMPLE_SETS[name].get("text_dir", SAMPLES_DIR / name / "text")
 
 # --- Safety limits ---
 MAX_TOOL_CALLS_PER_AGENT = 20  # stops any one agent from looping forever

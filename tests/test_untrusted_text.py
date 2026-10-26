@@ -13,7 +13,7 @@ INJECTION = (
 
 
 def test_every_tool_wraps_document_text():
-    store = DocumentStore(config.REAL_DATA_DIR)
+    store = DocumentStore(config.ARCHIVE_DATA_DIR)
     text = tools.read_section(store, "tracker_2022-04-01", 1)["text"]
     assert text.startswith('<document_text source="tracker_2022-04-01" trust="untrusted')
     assert text.rstrip().endswith("</document_text>")

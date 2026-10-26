@@ -10,13 +10,16 @@ DOC_TYPES = {
     "packet_excerpts": "Meeting backup packet (excerpt)",
     "uploads": "Uploaded by the journalist",
     "hilton_head": "Hilton Head Island Town Council minutes",
-    "county_recent": "Beaufort County Council or committee minutes (recent)",
+    "county_recent": "Beaufort County Council or committee minutes",
+    "dashboard": "Capital projects dashboard (dated snapshot of the county's live project list)",
+    "cip_plans": "Capital Improvement Plan, FY 2025-2026 (planned costs; summary pages)",
     "events": "Local event calendars (fetched today)",
     "school_board": "Beaufort County School District board agenda",
 }
 # Folders whose documents a journalist added for this search (uploads and one-click sets)
-ADDED_FOLDERS = {"uploads", "hilton_head", "school_board", "county_recent", "events"}
-SHIPPED_PDFS = Path(__file__).resolve().parent.parent / "data" / "pdfs"
+ADDED_FOLDERS = {"uploads", "hilton_head", "school_board", "events"}
+SHIPPED_PDFS = Path(__file__).resolve().parent.parent / "data" / "pdfs"  # the 2020–2022 archive
+CURRENT_PDFS = Path(__file__).resolve().parent.parent / "data" / "current" / "pdfs"
 SAMPLES = Path(__file__).resolve().parent.parent / "data" / "samples"
 PAGE_MARKER = re.compile(r"^=== Page (\d+) ===$", re.MULTILINE)
 DATE = re.compile(r"(\d{4}-\d{2}-\d{2})")
@@ -52,8 +55,10 @@ class DocumentStore:
         text = path.read_text(encoding="utf-8")
         pages = [p.strip() for p in PAGE_MARKER.split(text)[2::2]] or [text.strip()]
         relative = path.relative_to(self.text_dir).with_suffix(".pdf")
-        originals = [self.text_dir.parent / "pdfs" / relative, SHIPPED_PDFS / relative,
+        originals = [self.text_dir.parent / "pdfs" / relative, CURRENT_PDFS / relative, SHIPPED_PDFS / relative,
                      SAMPLES / relative.parts[0] / "pdfs" / relative.name]
+        if len(relative.parts) > 2:  # the archive, copied in as one folder: county_archive/trackers/...
+            originals.append(SHIPPED_PDFS / Path(*relative.parts[1:]))
         date = DATE.search(path.stem)
         return Document(
             doc_id=path.stem,

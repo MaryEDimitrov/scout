@@ -2,7 +2,8 @@
 
 **An AI investigative assistant for local government reporters.** Instead of asking the reporter what
 to search for, three AI agents scan a folder of real Beaufort County, South Carolina public records
-(capital project trackers and County Council minutes) and surface evidence-backed story leads:
+(the past year of County Council and committee minutes, the county's live project dashboard, and its
+capital plan) and surface evidence-backed story leads:
 
 - **Changes**: a project's cost, funding, status, or description differs between documents
 - **Missing links**: a cost or project appears, but no approval or funding record exists in the collection
@@ -65,8 +66,12 @@ search is saved to `runs/<run>/trace.md`, and token counts and costs come from t
 treated as untrusted like every other document, and stored only in `runs/uploads/` (never in `data/`).
 To try it, drag in any PDF from `data/pdfs/council/`.
 
-**Optional document sets (one click, no internet needed):** on some beats, step 2 offers real records
-shipped in `data/samples/`: **Hilton Head Island Town Council minutes** (21 meetings, Nov 2025–Sep 2026;
+**Optional document sets (one click, no internet needed):** on some beats, step 2 offers more real records:
+**Beaufort County project lists and Council minutes, 2020–2022 archive** (7 capital project tracker snapshots,
+17 minutes and agendas, 3 backup-packet excerpts; every beat except Events). The county stopped publishing
+dated project lists after 2022 (it now has a live dashboard with no saved versions), so this archive is the
+only set that can show a project's cost changing across lists, as in the $900,000 overage. Also shipped in
+`data/samples/`: **Hilton Head Island Town Council minutes** (21 meetings, Nov 2025–Sep 2026;
 Local government, Growth & development, Housing) and **Beaufort County School District board agendas**
 (19 meetings, Oct 2025–Oct 2026; Education). Sources: `data/SOURCES.md`.
 
@@ -131,7 +136,7 @@ Model: `gpt-6-luna` through Portkey (set once, in `leads/config.py`).
 
 ```bash
 .venv/bin/python -m pytest -v                                   # all tests, no API calls, ~1 second
-.venv/bin/python scripts/run_once.py "Public spending"          # one run in the terminal (add --fresh to skip caches)
+.venv/bin/python scripts/run_once.py "Public spending"          # one run in the terminal (--fresh skips caches, --archive uses 2020-2022)
 .venv/bin/python scripts/evaluate.py --runs 3                   # score against the synthetic answer key
 .venv/bin/python scripts/cost_experiment.py --runs 3            # baseline vs. lean context: tokens and quality
 .venv/bin/python scripts/cost_report.py                         # cost per run, per user, at 100 and 10,000 users
@@ -141,7 +146,7 @@ Model: `gpt-6-luna` through Portkey (set once, in `leads/config.py`).
 
 | Folder | What it is |
 |---|---|
-| `data/` | **Real, unaltered** Beaufort County public records: 7 capital project tracker snapshots (Dec 2020–Apr 2022), 17 Council/committee minutes and agendas, 3 backup-packet excerpts. Original PDFs in `data/pdfs/`, extracted text in `data/text/`. Sources and download dates: `data/SOURCES.md`. Leads found by hand before the app existed: `data/REFERENCE_LEADS.md`. |
+| `data/` | **Real, unaltered** Beaufort County public records. **Built-in collection** (always searched), in `data/current/`: 60 County Council and committee minutes, Oct 2025–Oct 2026 (PDFs in `pdfs/`, text in `text/`); a dated snapshot of the county's live Capital Projects Dashboard (`text/dashboard/`, raw county data in `raw/`); and pages 7–29 of the FY 2025–2026 Capital Improvement Plan (`text/cip_plans/`; the 116 MB original is linked in `data/SOURCES.md`). **2020–2022 archive** (one-click optional set): 7 capital project tracker snapshots (Dec 2020–Apr 2022), 17 Council/committee minutes and agendas, 3 backup-packet excerpts; PDFs in `data/pdfs/`, text in `data/text/`. Other optional sets in `data/samples/`. Sources and download dates: `data/SOURCES.md`. Leads found by hand before the app existed: `data/REFERENCE_LEADS.md`. |
 | `test_fixtures/` | **Synthetic** documents for a made-up county, with 3 planted leads, 3 decoys, and 1 prompt-injection file. Answer key: `test_fixtures/answer_key.json`. |
 
 The app reads only the shipped files. It never goes online except to call the model.
@@ -161,7 +166,10 @@ docs/                   report.html, slides.html, user-study materials
 
 ## Limits
 
-- "Missing" means "not found in this collection". Council records from April–November 2020 are not
-  online, so approvals from that period cannot be checked.
+- "Missing" means "not found in this collection". In the 2020–2022 archive, Council records from
+  April–November 2020 are not online, so approvals from that period cannot be checked.
+- The county's live project dashboard keeps no history, so the built-in collection has one dated snapshot
+  (`scripts/snapshot_dashboard.py` saves more). A capital plan is an estimate: a gap between the plan and a
+  later budget may be a scope change.
 - Results vary somewhat from run to run; the set-aside list and the run trace (`runs/<run>/trace.md`) show the reasoning each time.
 - Leads are starting points for reporting, never findings.

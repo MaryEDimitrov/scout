@@ -80,6 +80,7 @@ SCRIPT = [
 
 
 def run(tmp_path, script=SCRIPT, **kwargs):
+    kwargs.setdefault("data_dir", config.ARCHIVE_DATA_DIR)  # the scripted leads quote the 2020-2022 records
     return run_investigation("Public spending", client=ScriptedClient(script), runs_dir=tmp_path, **kwargs)
 
 

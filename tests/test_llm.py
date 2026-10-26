@@ -98,3 +98,8 @@ def test_missing_key_gives_a_plain_message(tmp_path, monkeypatch):
     project.mkdir()
     with pytest.raises(llm.MissingKey, match="Put a .env file"):
         llm.load_api_key(project)
+
+
+def test_a_stalled_ai_call_times_out_instead_of_hanging():
+    client = llm.make_client("test-key")
+    assert client.timeout == llm.config.MODEL_TIMEOUT_SECONDS and client.max_retries == llm.config.MODEL_RETRIES

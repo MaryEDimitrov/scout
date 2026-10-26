@@ -3,7 +3,7 @@
 from leads import config, tools
 from leads.documents import DocumentStore
 
-STORE = DocumentStore(config.REAL_DATA_DIR)
+STORE = DocumentStore(config.ARCHIVE_DATA_DIR)
 
 
 def test_collection_loads():
@@ -68,3 +68,12 @@ def test_lookup_falls_back_to_key_words_in_any_order():
     result = tools.lookup_project(STORE, "Change Order 2 Myrtle Park paving")  # not written this way anywhere
     assert result["matched_by"].startswith("all key words")
     assert "2022-02-07_exec_minutes_293" in result["documents_mentioning"]
+
+
+def test_current_project_lists_are_in_the_built_in_collection():
+    store = DocumentStore(config.CURRENT_DATA_DIR)
+    types = {d.doc_type for d in store.docs.values()}
+    assert any(t.startswith("Capital projects dashboard") for t in types)
+    assert any(t.startswith("Capital Improvement Plan") for t in types)
+    hits = tools.search_documents(store, "Buckwalter Recreation Athletic Complex")
+    assert any(r["doc_id"].startswith("project_list_") for r in hits["results"])

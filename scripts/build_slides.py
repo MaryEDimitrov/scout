@@ -13,7 +13,8 @@ SHOTS = Path(__file__).resolve().parent.parent / "docs" / "screenshots"
 # ---- settings to fill in -------------------------------------------------------------------------
 REPO_URL = "https://github.com/MaryEDimitrov/scout"  # e.g. "https://github.com/your-username/scout" (required by the professor)
 REPO_PRIVATE = False   # True if the repo is private (then add GitHub user zlisto as a collaborator)
-USER_TEST = ""         # e.g. "By hand: 0 of 5 leads in 20 min · With Scout: 3 leads in 2 min" (after colleagues test)
+USER_TEST = ("Tested by Sofie Sanchez and Evan McKenna, crime and general reporters I worked with at The Island "
+             "Packet. Many of the next steps come from them.")
 USER_QUOTE = ""        # e.g. '"I would use this every week." (former colleague, The Island Packet)'
 # ---------------------------------------------------------------------------------------------------
 
@@ -38,33 +39,29 @@ def todo(text: str) -> str:
 repo = (f'<a href="{REPO_URL}">{REPO_URL}</a>' if REPO_URL else todo("ADD GITHUB REPO URL"))
 private = ' <span class="small">(private repo; grader access via GitHub user <b>zlisto</b>)</span>' if REPO_PRIVATE else ""
 user_test = USER_TEST or todo("ADD: time by hand vs. with Scout, from colleague tests")
-user_quote = USER_QUOTE or todo("ADD: a colleague's quote")
+user_quote = USER_QUOTE
 
 SLIDES = f"""
 <section class="title">
   <div class="topline">Beaufort County, S.C. · Public Records Desk</div>
   <div class="brand"><img src="{art('scout_gator.svg')}" class="gator-big" alt="Scout"><h1>Scout</h1></div>
-  <p class="pitch">Every county meeting leaves a paper trail. Scout reads all of it, so the story hiding
-  in there doesn't slip past you.</p>
-  <p class="byline">Mary Dimitrov · Former local government reporter, now at Yale SOM · MGT 409 AI Foundations</p>
+  <p class="pitch">Scout reads Beaufort County's public records and flags the stories worth a reporter's time.</p>
+  <p class="byline">Mary Dimitrov · MGT 409 AI Foundations</p>
   <p class="repo">Code: {repo}{private}</p>
 </section>
 
 <section>
   <div class="kicker">The problem</div>
-  <h2>The $900,000 question nobody asked. Here's why local stories slip through.</h2>
+  <h2>Local reporters don't have time to read every page of the public record, so stories get missed</h2>
   <div class="cols">
     <div>
       <ul>
-        <li>When I covered Beaufort County, the best stories didn't come from press releases. They came from a
-            number that didn't add up.</li>
-        <li>Those numbers are scattered across <b>six websites</b>: project lists, Council minutes, school board
-            agendas, two town calendars and the jail roster.</li>
-        <li>Case in point: a <b>$900,000 building overage</b>. The Finance Committee chairman asked why Council
-            hadn't heard about it. Finding it takes three documents from two systems.</li>
+        <li>In my more than two years as a local print news reporter, combing records took up much of our time, and we still
+            sometimes missed what we should have caught.</li>
+        <li>The records for my paper's coverage area mainly sit on <b>six websites</b>: project lists, Council minutes, school board agendas,
+            two town calendars and the jail roster.</li>
+        <li>Stories hide inside long agendas and minutes (up to 16 pages a meeting), and in the gaps between documents.</li>
       </ul>
-      <p class="who">Who has this problem? Every local reporter with too many meetings and not enough hours.
-      I was one of them.</p>
     </div>
     <img src="{art('beats/local-government.svg')}" class="scout-side" alt="">
   </div>
@@ -72,73 +69,89 @@ SLIDES = f"""
 
 <section>
   <div class="kicker">What's new</div>
-  <h2>Other tools wait for a question. Here's what Scout does instead.</h2>
+  <h2>Other tools answer a reporter's questions. Scout tells them which questions to ask.</h2>
   <table class="compare">
-    <tr><th></th><th>Google Pinpoint, DocumentCloud</th><th>ChatGPT, NotebookLM</th><th class="us">Scout</th></tr>
+    <tr><th></th><th>Google Pinpoint, DocumentCloud</th><th>ChatGPT</th><th class="us">Scout</th></tr>
     <tr><td>Finds stories without being asked</td><td>No: you search</td><td>No: you ask</td><td class="us">Yes</td></tr>
     <tr><td>Compares versions and checks approvals</td><td>No</td><td>Only if asked</td><td class="us">Yes</td></tr>
-    <tr><td>Tries to knock down its own leads</td><td>No</td><td>No</td><td class="us">Yes, a Skeptic agent</td></tr>
+    <tr><td>Double-checks its own leads before you see them</td><td>No</td><td>No</td><td class="us">Yes, a Skeptic agent</td></tr>
     <tr><td>Every quote checked word for word</td><td>n/a</td><td>No, can invent</td><td class="us">Yes, in code</td></tr>
     <tr><td>Ranks by news value, checks local coverage</td><td>No</td><td>No</td><td class="us">Yes</td></tr>
   </table>
-  <p>Reporters don't need another chatbot. They need a second set of eyes that shows its receipts.</p>
+  <p>Reporters don't need another chatbot. They need a second set of eyes that shows where every fact came from.</p>
   <div class="corner"><img src="{art('scout_newspaper.svg')}" alt=""></div>
 </section>
 
 <section>
-  <div class="kicker">How the agents work</div>
-  <h2>Inside Scout: a newsroom of three agents and a copy desk that never sleeps</h2>
+  <div class="kicker">How it works</div>
+  <h2>Three agents propose, build and challenge each lead. Plain code has the final say.</h2>
   <div class="flow">
-    <div class="step"><div class="tag">Reporter</div><b>Picks a beat</b><span>adds this week's minutes, a jail log or event calendars</span></div>
+    <div class="step"><div class="tag">Reporter</div><b>Picks a beat</b><span>can add new minutes, a jail log or event calendars</span></div>
     <div class="arrow">→</div>
-    <div class="step"><img src="{art('scout_gator.svg')}" alt=""><b>Scout</b><span>lists, searches and reads the records<br>pitches possible stories</span></div>
+    <div class="step"><img src="{art('scout_gator.svg')}" alt=""><b>Scout</b><span>searches minutes and project lists<br>pitches possible stories</span></div>
     <div class="arrow">→</div>
-    <div class="step"><img src="{art('scout_newspaper.svg')}" alt=""><b>Connector</b><span>looks up each project, compares figures<br>builds the evidence</span></div>
+    <div class="step"><img src="{art('scout_newspaper.svg')}" alt=""><b>Connector</b><span>looks up each project<br>builds the evidence</span></div>
     <div class="arrow">→</div>
-    <div class="step"><img src="{art('scout_x.svg')}" alt=""><b>Skeptic</b><span>pulls the exact passages<br>tries to kill each lead</span></div>
+    <div class="step"><img src="{art('scout_x.svg')}" alt=""><b>Skeptic</b><span>rereads the exact passages<br>looks for an innocent explanation</span></div>
     <div class="arrow">→</div>
     <div class="step code"><div class="tag">Plain code</div><b>Copy desk</b><span>checks every quote word for word, enforces the rules, blocks accusations</span></div>
   </div>
-  <p class="note">A reporter finds it, an editor connects it, a skeptic tries to kill it, and nothing runs without the
-  quotes checking out. Every dismissed lead is logged with the reason. Model: gpt-6-luna on the course key.</p>
+  <p class="note">Built-in records: a year of County Council and committee minutes (Oct 2025–Oct 2026), a dated
+  snapshot of the county's live project dashboard and its 2025–2026 capital plan. Every rejected lead is logged
+  with the reason. Model: gpt-6-luna on the course key.</p>
 </section>
 
 <section>
   <div class="kicker">Demo</div>
-  <h2>Pick a beat. Here's what comes back.</h2>
+  <h2>A reporter picks a beat and gets ranked leads with the evidence attached</h2>
   <div class="shots two">
-    <figure><img src="{shot('s_beats.png')}" alt="Beat picker"><figcaption>Choose a beat. (Scout dresses for each one.)</figcaption></figure>
-    <figure><img src="{shot('s_card.png')}" alt="A lead card"><figcaption>A real lead from county records: the quotes, why it matters, and who to call</figcaption></figure>
+    <figure><img src="{shot('s_beats.png')}" alt="Beat picker"><figcaption>Eight beats, modeled on The Island Packet, The Beaufort Gazette and The State</figcaption></figure>
+    <figure><img src="{shot('s_card.png')}" alt="A lead card"><figcaption>Each card: the exact quotes, why it matters, an innocent explanation and who to call</figcaption></figure>
   </div>
 </section>
 
 <section>
   <div class="kicker">Demo</div>
-  <h2>Built the way local reporters actually work</h2>
+  <h2>Scout fits into a reporter's week instead of adding to it</h2>
   <div class="shots two">
-    <figure><img src="{shot('s_docs.png')}" alt="Add documents"><figcaption>Drop in this week's minutes or school board agendas, or pull today's jail log in one click</figcaption></figure>
-    <figure><img src="{shot('s_sections.png')}" alt="Coverage and set-aside leads"><figcaption>What local outlets already covered, and every lead Scout threw out, with the reason</figcaption></figure>
+    <figure><img src="{shot('s_docs.png')}" alt="Add documents"><figcaption>Drop in this week's minutes, or add ready-made record sets with one click</figcaption></figure>
+    <figure><img src="{shot('s_sections.png')}" alt="Coverage and set-aside leads"><figcaption>See what local outlets already covered, plus every lead Scout threw out and why</figcaption></figure>
   </div>
+</section>
+
+<section>
+  <div class="kicker">Impact</div>
+  <h2>Scout catches planted stories, one of mine, and new ones in this year's records</h2>
+  <div class="stats">
+    <div class="stat"><b>3 of 3</b><span>planted stories found in my test documents (3 runs)</span></div>
+    <div class="stat"><b>3 of 3</b><span>decoys correctly thrown out or never raised</span></div>
+    <div class="stat"><b>3 → 1 of 5</b><span>stories I found by hand in the 2020–2022 records: 3 per search in the first version, 1 after I refocused Scout on this year's records. Fixing that is next.</span></div>
+    <div class="stat"><b>~45 sec</b><span>per search across a year of minutes plus the county's project lists</span></div>
+  </div>
+  <p><b>A 2026 lead:</b> the county's dashboard shows $2.0 million of Ford's Shell Ring Park's $2.26 million budget
+  spent and the project "Not Started," but a construction contract was approved in February. Worth a call.</p>
+  <p><b>Real reporters:</b> {user_test}</p>
+  {f"<p>{user_quote}</p>" if user_quote else ""}
 </section>
 
 <section>
   <div class="kicker">Cost to run</div>
-  <h2>What it costs: less than a penny a search</h2>
+  <h2>A search costs less than a penny, so cost won't stop a newsroom from using it</h2>
   <div class="stats">
-    <div class="stat"><b>$0.009</b><span>per search: ~114K input tokens (67% cached) and ~6.5K output, average of 4 real runs</span></div>
-    <div class="stat"><b>$0.18</b><span>per reporter per month, at 20 searches (about one per workday)</span></div>
-    <div class="stat"><b>$17.60</b><span>a month for 100 reporters</span></div>
-    <div class="stat"><b>$1,760</b><span>a month for 10,000 reporters. Repeat searches cost $0 (the app's own cache)</span></div>
+    <div class="stat"><b>$0.007</b><span>per search: ~94K input tokens (66% cached) and ~5.4K output, average of 4 real runs</span></div>
+    <div class="stat"><b>$0.15</b><span>per reporter per month, at 20 searches (about one per workday)</span></div>
+    <div class="stat"><b>$14.54</b><span>a month for 100 reporters</span></div>
+    <div class="stat"><b>$1,454</b><span>a month for 10,000 reporters. Repeat searches cost $0 (the app's own cache)</span></div>
   </div>
-  <p>I tried to cut costs by feeding the agents shorter pages. It backfired: they made more calls, used 9% more
-  tokens and missed a planted lead (2.7 vs. 3.0 of 3). I kept the full pages.</p>
-  <p><b>Building and testing all of Scout cost my Portkey key $0.39</b>: 53 searches and 477 AI calls.</p>
+  <p>I tried to save money by giving the agents shorter pages. It backfired. They made more calls, used 9% more
+  tokens and missed a planted lead (2.7 of 3 on average instead of 3 of 3). So I kept the full pages.</p>
+  <p><b>Building and testing all of Scout cost $0.50 on my Portkey key</b>: 69 searches and 597 AI calls.</p>
   <p class="note">gpt-6-luna list prices from Portkey: $0.10 per 1M input tokens, $0.01 cached, $0.50 output.</p>
 </section>
 
 <section>
   <div class="kicker">Safety</div>
-  <h2>A wrong lead can hurt a real person. Here's how Scout guards against it.</h2>
+  <h2>A wrong lead can hurt a real person, so the key safeguards run in code</h2>
   <div class="cols">
     <ul class="safety">
       <li><b>Made-up facts:</b> every quote is checked word for word against its source file. If it isn't there, it's cut.</li>
@@ -146,34 +159,22 @@ SLIDES = f"""
       <li><b>Runaway agents and spending:</b> 20 tool calls per agent, 50 per run, and a 250K-token budget that stops cleanly.</li>
       <li><b>Accusations:</b> code blocks accusatory wording. Arrest cards say "an accusation, not a conviction."</li>
       <li><b>Privacy:</b> jail-log addresses, birth dates and race are stripped in code. Contact info is for officials only.</li>
-      <li><b>It caught me, too:</b> my own code flagged "28 grams or less" as trafficking. The agents threw it out.</li>
     </ul>
     <img src="{art('beats/public-safety.svg')}" class="scout-side" alt="">
   </div>
-  <p class="note">78 automated tests, and none of them need an API key to run.</p>
-</section>
-
-<section>
-  <div class="kicker">Impact</div>
-  <h2>Does it work? Here's what the numbers say.</h2>
-  <div class="stats">
-    <div class="stat"><b>3 of 3</b><span>planted stories found in my test documents (3 runs)</span></div>
-    <div class="stat"><b>3 of 3</b><span>decoys correctly thrown out or never raised</span></div>
-    <div class="stat"><b>3 of 5</b><span>of the real Beaufort leads I checked by hand surfaced in one search, including the $900K overage</span></div>
-    <div class="stat"><b>1–2 min</b><span>per search, across 27+ county records</span></div>
-  </div>
-  <p><b>Real reporters:</b> {user_test}</p>
-  <p>{user_quote}</p>
+  <p class="note">82 automated tests. None of them need an API key.</p>
 </section>
 
 <section class="title last">
   <div class="kicker">What's next</div>
-  <h2>What's next for Scout</h2>
+  <h2>Next: make Scout part of a reporter's daily routine</h2>
+  <p class="small">Many of these came from the reporters who tested Scout.</p>
   <ul class="next">
-    <li><b>This year's records by default,</b> with saved snapshots of the county's live project dashboard.</li>
-    <li><b>A Monday-morning rundown:</b> what's new since your last scan.</li>
-    <li><b>One-click public records requests</b> (S.C. FOIA) drafted from a lead.</li>
-    <li><b>A social media monitor,</b> once the platforms allow it within the rules.</li>
+    <li><b>Sync with the reporter's source sheet,</b> so "who to call" includes the people they already know.</li>
+    <li><b>A morning rundown,</b> emailed automatically, of what's new since the last search.</li>
+    <li><b>Weekly dashboard snapshots,</b> to build the budget history the county doesn't keep.</li>
+    <li><b>One-click public records requests</b> (S.C. FOIA), drafted from a lead.</li>
+    <li><b>A social media monitor,</b> once the platforms' rules allow it.</li>
   </ul>
   <div class="parade">
     <img src="{art('beats/events-openings-closings.svg')}" alt=""><img src="{art('beats/transportation.svg')}" alt="">
@@ -220,7 +221,7 @@ CSS = """
 .note { font-size:.66em; color:var(--muted); margin-top:.9em; }
 .shots { display:flex; gap:.6em; align-items:flex-start; }
 .shots figure { flex:1; margin:0; }
-.shots img { width:100%; max-height:520px; object-fit:contain; object-position:top; border:1px solid var(--rule); box-shadow:0 4px 18px rgba(0,0,0,.08); }
+.shots img { width:100%; max-height:430px; object-fit:contain; object-position:top; border:1px solid var(--rule); box-shadow:0 4px 18px rgba(0,0,0,.08); }
 .shots figcaption { font-size:.62em; color:var(--muted); margin-top:.35em; }
 .stats { display:grid; grid-template-columns:repeat(4, 1fr); gap:.5em; margin:.3em 0 .8em; }
 .stat { border-top:3px solid var(--ink); padding-top:.3em; }

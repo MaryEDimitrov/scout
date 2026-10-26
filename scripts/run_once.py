@@ -4,6 +4,7 @@ Usage:
     python scripts/run_once.py "Public spending"            # uses the app cache when possible
     python scripts/run_once.py "Public spending" --fresh    # bypasses all caches (for measuring)
     python scripts/run_once.py "Public spending" --fixtures # runs on the synthetic test documents
+    python scripts/run_once.py "Public spending" --archive  # runs on the 2020-2022 records (reference leads)
 """
 
 import argparse
@@ -21,9 +22,11 @@ def main():
     parser.add_argument("area", choices=list(AREAS))
     parser.add_argument("--fresh", action="store_true", help="bypass caches so tokens are really spent")
     parser.add_argument("--fixtures", action="store_true", help="use test_fixtures/ instead of the real data")
+    parser.add_argument("--archive", action="store_true", help="use the 2020-2022 records in data/text/")
     args = parser.parse_args()
 
-    data_dir = config.FIXTURE_DATA_DIR if args.fixtures else config.REAL_DATA_DIR
+    data_dir = (config.FIXTURE_DATA_DIR if args.fixtures else
+                config.ARCHIVE_DATA_DIR if args.archive else config.CURRENT_DATA_DIR)
     result = run_investigation(args.area, data_dir=data_dir, fresh=args.fresh,
                                on_progress=lambda stage, fraction: print(f"  … {stage}"))
 

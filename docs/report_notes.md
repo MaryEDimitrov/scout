@@ -22,10 +22,10 @@ slides (and add GitHub user `zlisto` as a collaborator so they can clone it).
   - Planned design: one-click, beat-specific hashtag searches that open in the reporter's own logged-in
     browser, plus a "paste posts" box. An agent compares pasted posts with the beat's leads. Posts count
     as tips, never as verified evidence, and private individuals are never named on a card.
-- **Move the built-in county records to the current year.** The county stopped publishing dated project
-  lists (now an interactive dashboard), so "numbers changed" leads for current projects need saved
-  snapshots of that dashboard over time. The past year's Council and committee minutes are already
-  available as a one-click set.
+- **Snapshots of the county's live project dashboard.** Done 2026-10-25: the built-in records are now the
+  past year of Council and committee minutes (Oct 2025–Oct 2026), and the 2020–2022 records are a one-click
+  archive. The county stopped publishing dated project lists (now an interactive dashboard), so "numbers
+  changed" leads that compare project lists over time need saved snapshots of that dashboard.
 - **"What's new since my last scan."** Remember past results and flag new leads each week.
 - **Records-request drafter.** One click turns a lead into a South Carolina FOIA request that names the
   exact documents and figures.

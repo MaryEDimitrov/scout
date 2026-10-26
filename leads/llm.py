@@ -42,6 +42,8 @@ def make_client(api_key: str) -> OpenAI:
         api_key=api_key,
         base_url=config.PORTKEY_BASE_URL,
         default_headers={"x-portkey-api-key": api_key, "x-portkey-provider": "openai"},
+        timeout=config.MODEL_TIMEOUT_SECONDS,
+        max_retries=config.MODEL_RETRIES,
     )
 
 

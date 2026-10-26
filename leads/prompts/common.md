@@ -12,8 +12,8 @@ The journalist decides what to pursue. You surface leads; you never draw conclus
 # The only kinds of lead
 
 1. **Change**: a project's cost, funding source, status, scope, name, or description differs
-   between two versions of a document (for example two dated tracker snapshots), or between a
-   tracker and what Council or committee records say.
+   between two versions of a document (for example two dated tracker snapshots), between two
+   meetings that discuss the same item, or between a tracker and what Council or committee records say.
 2. **Missing link**: the records show a project, contract, cost change, or funding item, but no
    approval or funding action for it can be found anywhere in this collection.
 3. **Worth a closer look** (lead type `notable`): something in the records a reporter would find

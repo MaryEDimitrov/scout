@@ -64,7 +64,7 @@ class RunResult:
     jail: dict = field(default_factory=dict)  # jail-log summary: bookings checked, flagged, ICE holds
 
 
-def run_investigation(area: str, data_dir: Path = config.REAL_DATA_DIR, fresh: bool = False,
+def run_investigation(area: str, data_dir: Path = config.CURRENT_DATA_DIR, fresh: bool = False,
                       client=None, token_budget: int = config.TOKEN_BUDGET_PER_RUN,
                       on_progress=lambda stage, fraction: None, runs_dir: Path = config.RUNS_DIR) -> RunResult:
     run_id = datetime.now().strftime("%Y%m%d-%H%M%S-") + re.sub(r"\W+", "-", area.lower())
@@ -138,6 +138,8 @@ def run_investigation(area: str, data_dir: Path = config.REAL_DATA_DIR, fresh: b
         result.message = "The API key was rejected. Check PORTKEY_API_KEY in your .env file."
     except openai.RateLimitError:
         result.message = "The AI service is busy or the account is over its limit. Wait a minute and try again."
+    except openai.APITimeoutError:
+        result.message = "The AI service took too long to answer. Try again in a minute."
     except openai.APIConnectionError:
         result.message = "Could not reach the AI service. Check your internet connection and try again."
     except openai.APIError as problem:
@@ -159,7 +161,7 @@ def data_source(data_dir: Path) -> str:
     """Label runs so measured costs only count the plain real collection."""
     if data_dir == config.FIXTURE_DATA_DIR:
         return "fixtures"
-    return "real" if data_dir == config.REAL_DATA_DIR else "real+uploads"
+    return "real" if data_dir == config.CURRENT_DATA_DIR else "real+uploads"
 
 
 def apply_code_checks(store: DocumentStore, leads: list[dict], verdicts: dict, trace: Trace):

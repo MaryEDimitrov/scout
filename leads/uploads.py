@@ -137,7 +137,7 @@ def fetch_jail_roster(url: str = config.JAIL_ROSTER_URL, timeout: int = 20) -> t
     return f"jail_roster_{datetime.now():%Y-%m-%d_%H%M}.html", data, len(records)
 
 
-def build_collection(files: list[tuple[str, bytes]], base_dir: Path = config.REAL_DATA_DIR,
+def build_collection(files: list[tuple[str, bytes]], base_dir: Path = config.CURRENT_DATA_DIR,
                      uploads_root: Path = config.RUNS_DIR / "uploads",
                      sample_sets: list[str] | None = None) -> tuple[Path, list[dict]]:
     """Copy the shipped collection, any optional sets, and the uploads into one folder.
@@ -180,9 +180,12 @@ def build_collection(files: list[tuple[str, bytes]], base_dir: Path = config.REA
 
     added_notes = UPLOAD_NOTE if files else ""
     for name in sample_sets:
-        shutil.copytree(config.SAMPLES_DIR / name / "text", text_dir / name)
+        source = config.sample_text_dir(name)
+        shutil.copytree(source, text_dir / name, ignore=shutil.ignore_patterns("COLLECTION_NOTES.md"))
         info = config.SAMPLE_SETS[name]
         added_notes += f"\n- Folder '{name}': {info['label']} ({info['dates']}), added by the journalist.\n"
+        if (source / "COLLECTION_NOTES.md").exists():
+            added_notes += "\n".join("  " + line for line in (source / "COLLECTION_NOTES.md").read_text().splitlines()) + "\n"
 
     notes = text_dir / "COLLECTION_NOTES.md"
     notes.write_text((notes.read_text() if notes.exists() else "") + added_notes)

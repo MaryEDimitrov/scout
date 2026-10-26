@@ -14,8 +14,8 @@ of the session?" Write down the answer in the results sheet.
 ## Part 1: By hand (20 minutes, timed)
 
 Say this:
-> "Here are 27 real Beaufort County records: capital project trackers and Council minutes from
-> December 2020 to April 2022. Imagine you're on the county beat with an afternoon to find a story.
+> "Here are 27 real Beaufort County records from the county's 2020–2022 archive: capital project
+> trackers and Council minutes from December 2020 to April 2022. Imagine you're on the county beat with an afternoon to find a story.
 > Look for project costs that changed, or spending with no approval on record. Say each lead out loud
 > when you find it. You have 20 minutes."
 
@@ -30,8 +30,11 @@ Do not help or hint. Do not show the app yet.
 ## Part 2: With Scout (10 minutes, timed)
 
 Say this:
-> "Now the same records with the app. Pick a beat, press Find leads, and tell me what you'd do with
-> each lead."
+> "Now the same records with the app. Pick Public spending, click **Add these** next to the 2020–2022
+> archive, press Find stories, and tell me what you'd do with each lead."
+
+(Scout always searches the 2025–2026 county minutes too, so some cards will be about 2026. Note
+those separately: they are bonus leads, not part of the by-hand comparison.)
 
 Have them operate the app themselves. Start the timer when they press the button. Record:
 - time until the first lead card appears, and until they finish reading all cards

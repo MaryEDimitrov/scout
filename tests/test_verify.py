@@ -4,7 +4,7 @@ from leads import config
 from leads.documents import DocumentStore
 from leads.verify import check_quote, verify_lead
 
-STORE = DocumentStore(config.REAL_DATA_DIR)
+STORE = DocumentStore(config.ARCHIVE_DATA_DIR)
 FINANCE = "2022-03-21_finance_minutes_360"
 REAL_QUOTE = "Committee Chairman Lawson asked about the overage on the Arthur Horne Building"
 

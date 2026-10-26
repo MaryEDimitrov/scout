@@ -367,12 +367,12 @@ def preview(filename: str, data: bytes) -> tuple[int, str | None]:
 
 @st.cache_data(show_spinner=False)
 def sample_size(name: str) -> int:
-    return len(list((config.SAMPLES_DIR / name / "text").glob("*.txt")))
+    return len(list(config.sample_text_dir(name).rglob("*.txt")))
 
 
 @st.cache_data(show_spinner=False)
 def county_record_count(fixtures: bool) -> int:
-    return len(DocumentStore(config.FIXTURE_DATA_DIR if fixtures else config.REAL_DATA_DIR).docs)
+    return len(DocumentStore(config.FIXTURE_DATA_DIR if fixtures else config.CURRENT_DATA_DIR).docs)
 
 
 def find_stories(beat: str, files: dict, samples: set | None = None):
@@ -399,7 +399,7 @@ def search(bar, beat: str, files: dict, samples: list):
         if fraction in PROGRESS:
             bar.progress(fraction, text=PROGRESS[fraction])
 
-    data_dir = config.FIXTURE_DATA_DIR if fixtures else config.REAL_DATA_DIR
+    data_dir = config.FIXTURE_DATA_DIR if fixtures else config.CURRENT_DATA_DIR
     state.events_note = ""
     if beat == "Events, openings & closings":
         try:
@@ -462,9 +462,9 @@ with page.container():
                 f'<div class="sub">Scout will look for {esc(looks_for)}.<br>'
                 f'Every lead is ranked by news value and checked against recent local coverage.</div>'
                 f'<div class="label">Add more documents (optional)</div>'
-                f'<div class="sub">Scout always searches Beaufort County\'s 2020–2022 project lists and Council '
-                f'minutes. Add the past year\'s meetings below to search recent records too, or drop in '
-                f'{esc(worth_adding)}.</div>')
+                f'<div class="sub">Scout always searches the past year of Beaufort County Council and committee '
+                f'minutes (October 2025 to October 2026), the county\'s current project list, and its 2025–2026 '
+                f'capital plan. Drop in {esc(worth_adding)} below, or add the county\'s 2020–2022 records.</div>')
 
         uploaded = st.file_uploader("Drop minutes or agendas here", type=["pdf", "txt", "html", "htm"],
                                     accept_multiple_files=True, key=f"uploader_{state.uploader_key}",

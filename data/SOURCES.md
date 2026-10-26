@@ -132,7 +132,11 @@ meeting's agenda and agenda packet but no separate minutes, so the agendas are u
 | 2026-10-06_school-board_regular_agenda_1039.pdf | https://beaufortcountyschooldistrict.community.diligentoneplatform.com/Portal/MeetingInformation.aspx?Org=Cal&Id=1039 |
 | 2026-10-20_school-board_regular_agenda_1045.pdf | https://beaufortcountyschooldistrict.community.diligentoneplatform.com/Portal/MeetingInformation.aspx?Org=Cal&Id=1045 |
 
-### Beaufort County Council and committee minutes (Oct 2025 – Oct 2026)
+### Beaufort County Council and committee minutes (Oct 2025 – Oct 2026): the built-in collection
+
+Since 2026-10-25 these are the records Scout always searches. Stored in `data/current/pdfs/county_recent/`
+(originals) and `data/current/text/county_recent/`. The December 2020 – April 2022 records above are now an
+optional one-click archive.
 
 From the county's CivicClerk portal (https://beaufortcosc.portal.civicclerk.com/). All meetings with
 posted minutes except Caucus meetings (mostly closed-session notices).
@@ -209,3 +213,22 @@ Administration page, the Town of Hilton Head Island Town Council page
 (https://www.portroyal.org/171/Town-Council), and the Beaufort County School District site. The Sheriff's
 Office site blocks automated access and the Solicitor's site lists no office line, so those two are links only.
 Each entry in the file keeps its own source link.
+
+## Current project lists (built-in collection)
+
+### Capital Projects Dashboard snapshots
+
+The county's live dashboard (https://bcscgis.maps.arcgis.com/apps/dashboards/4f51cca9d4bf4caea48a3860b0646bfb,
+linked from https://www.beaufortcountysc.gov/capital-projects-management/) keeps no past versions.
+`scripts/snapshot_dashboard.py` saves its data layer
+(https://services.arcgis.com/mbPLXL6SDfBjrAmS/arcgis/rest/services/Capital_Projects/FeatureServer/0) as a dated list:
+`data/current/text/dashboard/project_list_<date>.txt`, with the county's raw data in `data/current/raw/dashboard/`.
+First snapshot: 2026-10-25 (24 projects; the county last edited the data in March 2026).
+
+### Capital Improvement Plan, fiscal years 2025–2026
+
+https://www.beaufortcountysc.gov/capital-projects-management/FY%202025%20CIP%20Plan.pdf (downloaded 2026-10-25,
+307 pages, 116 MB). Only the text of pages 7–29 (project lists and summary tables) is shipped, in
+`data/current/text/cip_plans/cip_fy2025-2026_p7-29.txt`; page N there is page N+6 of the original. The PDF is too
+large for GitHub, even cut down to those pages. A FY 2023 plan is also linked from the county page, but the
+file it serves is empty (0 bytes, checked 2026-10-25).
