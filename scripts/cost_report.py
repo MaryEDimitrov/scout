@@ -99,6 +99,18 @@ def main():
                   "Assumption: every run is fresh. Repeat runs served from the app cache cost nothing, "
                   "so real costs would be lower."]
 
+    # Everything this project has spent on the Portkey key so far (every logged AI call that wasn't a cache hit)
+    import csv
+    log = config.RUNS_DIR / "token_log.csv"
+    if log.exists() and prices_set():
+        paid = [row for row in csv.DictReader(log.open()) if row["from_app_cache"] != "True"]
+        totals = {k: sum(int(row.get(k) or 0) for row in paid)
+                  for k in ("input_tokens", "cached_input_tokens", "cache_write_tokens", "output_tokens")}
+        spent = cost_usd(totals["input_tokens"], totals["cached_input_tokens"], totals["output_tokens"],
+                         totals["cache_write_tokens"])
+        lines += ["", f"**Spent on the Portkey key so far:** ${spent:.2f} across {len({r['run_id'] for r in paid})} "
+                      f"searches and {len(paid)} AI calls (building, testing, evaluation, and demos)."]
+
     text = "\n".join(lines) + "\n"
     print(text)
     out = config.RUNS_DIR / "cost_report.md"
