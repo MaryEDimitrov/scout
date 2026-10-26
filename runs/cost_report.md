@@ -22,4 +22,4 @@ gpt-6-luna prices per 1M tokens (Portkey's public price list): input $0.1, cache
 
 Assumption: every run is fresh. Repeat runs served from the app cache cost nothing, so real costs would be lower.
 
-**Spent on the Portkey key so far:** $0.50 across 69 searches and 597 AI calls (building, testing, evaluation, and demos).
+**Spent on the Portkey key so far:** $0.52 across 72 searches and 623 AI calls (building, testing, evaluation, and demos).
