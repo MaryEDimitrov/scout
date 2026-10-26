@@ -44,26 +44,26 @@ SLIDES = f"""
 <section class="title">
   <div class="topline">Beaufort County, S.C. · Public Records Desk</div>
   <div class="brand"><img src="{art('scout_gator.svg')}" class="gator-big" alt="Scout"><h1>Scout</h1></div>
-  <p class="pitch">I spent years digging through county records for stories. Scout does the digging,
-  so reporters can get back to reporting.</p>
+  <p class="pitch">Every county meeting leaves a paper trail. Scout reads all of it, so the story hiding
+  in there doesn't slip past you.</p>
   <p class="byline">Mary Dimitrov · Former local government reporter, now at Yale SOM · MGT 409 AI Foundations</p>
   <p class="repo">Code: {repo}{private}</p>
 </section>
 
 <section>
   <div class="kicker">The problem</div>
-  <h2>The stories are buried in public records. Newsrooms don't have the hours to dig.</h2>
+  <h2>The $900,000 question nobody asked. Here's why local stories slip through.</h2>
   <div class="cols">
     <div>
       <ul>
-        <li>When I covered local government, the best stories never came from press releases. They came from
-            a number that didn't match between two documents.</li>
-        <li>In Beaufort County, those documents live on <b>six different websites</b>: project lists, Council
-            minutes, school board agendas, two town calendars and the jail roster.</li>
-        <li>One lead Scout found: a <b>$900,000 building overage</b> the Finance Committee chairman said Council
-            had never heard about. Spotting it means lining up three documents from two systems.</li>
+        <li>When I covered Beaufort County, the best stories didn't come from press releases. They came from a
+            number that didn't add up.</li>
+        <li>Those numbers are scattered across <b>six websites</b>: project lists, Council minutes, school board
+            agendas, two town calendars and the jail roster.</li>
+        <li>Case in point: a <b>$900,000 building overage</b>. The Finance Committee chairman asked why Council
+            hadn't heard about it. Finding it takes three documents from two systems.</li>
       </ul>
-      <p class="who">Who has this problem: every local reporter with too many meetings and not enough hours.
+      <p class="who">Who has this problem? Every local reporter with too many meetings and not enough hours.
       I was one of them.</p>
     </div>
     <img src="{art('beats/local-government.svg')}" class="scout-side" alt="">
@@ -72,7 +72,7 @@ SLIDES = f"""
 
 <section>
   <div class="kicker">What's new</div>
-  <h2>Most tools wait for the right question. Scout goes looking.</h2>
+  <h2>Other tools wait for a question. Here's what Scout does instead.</h2>
   <table class="compare">
     <tr><th></th><th>Google Pinpoint, DocumentCloud</th><th>ChatGPT, NotebookLM</th><th class="us">Scout</th></tr>
     <tr><td>Finds stories without being asked</td><td>No: you search</td><td>No: you ask</td><td class="us">Yes</td></tr>
@@ -81,13 +81,13 @@ SLIDES = f"""
     <tr><td>Every quote checked word for word</td><td>n/a</td><td>No, can invent</td><td class="us">Yes, in code</td></tr>
     <tr><td>Ranks by news value, checks local coverage</td><td>No</td><td>No</td><td class="us">Yes</td></tr>
   </table>
-  <p>Reporters don't need another chatbot. They need a second set of eyes that brings receipts.</p>
+  <p>Reporters don't need another chatbot. They need a second set of eyes that shows its receipts.</p>
   <div class="corner"><img src="{art('scout_newspaper.svg')}" alt=""></div>
 </section>
 
 <section>
   <div class="kicker">How the agents work</div>
-  <h2>It works like a newsroom, and the copy desk is code</h2>
+  <h2>Inside Scout: a newsroom of three agents and a copy desk that never sleeps</h2>
   <div class="flow">
     <div class="step"><div class="tag">Reporter</div><b>Picks a beat</b><span>adds this week's minutes, a jail log or event calendars</span></div>
     <div class="arrow">→</div>
@@ -105,7 +105,7 @@ SLIDES = f"""
 
 <section>
   <div class="kicker">Demo</div>
-  <h2>Pick a beat. Get leads you can actually report.</h2>
+  <h2>Pick a beat. Here's what comes back.</h2>
   <div class="shots two">
     <figure><img src="{shot('s_beats.png')}" alt="Beat picker"><figcaption>Choose a beat. (Scout dresses for each one.)</figcaption></figure>
     <figure><img src="{shot('s_card.png')}" alt="A lead card"><figcaption>A real lead from county records: the quotes, why it matters, and who to call</figcaption></figure>
@@ -114,7 +114,7 @@ SLIDES = f"""
 
 <section>
   <div class="kicker">Demo</div>
-  <h2>Built for how I used to work</h2>
+  <h2>Built the way local reporters actually work</h2>
   <div class="shots two">
     <figure><img src="{shot('s_docs.png')}" alt="Add documents"><figcaption>Drop in this week's minutes or school board agendas, or pull today's jail log in one click</figcaption></figure>
     <figure><img src="{shot('s_sections.png')}" alt="Coverage and set-aside leads"><figcaption>What local outlets already covered, and every lead Scout threw out, with the reason</figcaption></figure>
@@ -123,7 +123,7 @@ SLIDES = f"""
 
 <section>
   <div class="kicker">Cost to run</div>
-  <h2>Less than a penny a search</h2>
+  <h2>What it costs: less than a penny a search</h2>
   <div class="stats">
     <div class="stat"><b>$0.009</b><span>per search: ~114K input tokens (67% cached) and ~6.5K output, average of 4 real runs</span></div>
     <div class="stat"><b>$0.18</b><span>per reporter per month, at 20 searches (about one per workday)</span></div>
@@ -138,7 +138,7 @@ SLIDES = f"""
 
 <section>
   <div class="kicker">Safety</div>
-  <h2>A wrong lead can hurt a real person. Every risk has a guardrail and a test.</h2>
+  <h2>A wrong lead can hurt a real person. Here's how Scout guards against it.</h2>
   <div class="cols">
     <ul class="safety">
       <li><b>Made-up facts:</b> every quote is checked word for word against its source file. If it isn't there, it's cut.</li>
@@ -155,7 +155,7 @@ SLIDES = f"""
 
 <section>
   <div class="kicker">Impact</div>
-  <h2>It finds what I found by hand, in a couple of minutes</h2>
+  <h2>Does it work? Here's what the numbers say.</h2>
   <div class="stats">
     <div class="stat"><b>3 of 3</b><span>planted stories found in my test documents (3 runs)</span></div>
     <div class="stat"><b>3 of 3</b><span>decoys correctly thrown out or never raised</span></div>
@@ -168,10 +168,10 @@ SLIDES = f"""
 
 <section class="title last">
   <div class="kicker">What's next</div>
-  <h2>From class project to a tool in the newsroom every week</h2>
+  <h2>What's next for Scout</h2>
   <ul class="next">
     <li><b>This year's records by default,</b> with saved snapshots of the county's live project dashboard.</li>
-    <li><b>"What's new since my last scan,"</b> every Monday morning.</li>
+    <li><b>A Monday-morning rundown:</b> what's new since your last scan.</li>
     <li><b>One-click public records requests</b> (S.C. FOIA) drafted from a lead.</li>
     <li><b>A social media monitor,</b> once the platforms allow it within the rules.</li>
   </ul>
