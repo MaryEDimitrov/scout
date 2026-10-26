@@ -126,10 +126,10 @@ SLIDES = f"""
     <div class="stat"><b>3 of 3</b><span>planted stories found in my test documents (3 runs)</span></div>
     <div class="stat"><b>3 of 3</b><span>decoys correctly thrown out or never raised</span></div>
     <div class="stat"><b>3 → 1 of 5</b><span>stories I found by hand in the 2020–2022 records: 3 per search in the first version, 1 after I refocused Scout on this year's records. Fixing that is next.</span></div>
-    <div class="stat"><b>~45 sec</b><span>per search across a year of minutes plus the county's project lists</span></div>
+    <div class="stat"><b>1 hr → 45s</b><span>my first hour of the morning combing documents and monitoring news, vs. one Scout search</span></div>
   </div>
-  <p><b>A 2026 lead:</b> the county's dashboard shows $2.0 million of Ford's Shell Ring Park's $2.26 million budget
-  spent and the project "Not Started," but a construction contract was approved in February. Worth a call.</p>
+  <p><b>A 2026 lead:</b> the county approved $5.7 million in change orders to add soccer fields and lighting to a
+  recreation complex expansion, on condition of a budget amendment. Worth a call.</p>
   <p><b>Real reporters:</b> {user_test}</p>
   {f"<p>{user_quote}</p>" if user_quote else ""}
 </section>
